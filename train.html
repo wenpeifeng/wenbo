@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>支付页面</title>
+    <link rel="stylesheet" href="css/style.css">
+	    <link rel="stylesheet" href="css/aa.css">
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/selectivizr-min.js"></script>
+    <script src="js/style.js"></script>
+	  <script src="js/aa.js"></script>
+</head>
+<style>
+.arrow_down{height: 5px;width: auto;margin:8px 6px;vertical-align: top;display: inline-block;transition:All 0.4s ease-in-out;
+   -webkit-transition:All 0.4s ease-in-out;  -moz-transition:All 0.4s ease-in-out; -o-transition:All 0.4s ease-in-out;}
+.moreperson{font-size:12px;position:absolute;left:520px;top:107px;color:#FF4500}
+.moreperson:hover{color:#FF0000}
+.imghovers{transform:rotate(180deg);-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-o-transform:rotate(180deg);-ms-transform:rotate(180deg);}    
+.md-checkbox-inline{position:relative;width:510px;}
+.checkboxactive{height:80px;overflow:hidden}
+.md-checkbox{float:left;height:33px;margin:5px;line-height:33px;width:75px;}
+
+
+
+.selecttrainText{border: 1px solid #d1cdcd;border-radius: 3px;width:310px;height: 40px;font-size:15px;padding-left:8px;}
+.trainText{border: 1px solid #d1cdcd;border-radius: 3px;width:220px;height: 40px;font-size:15px;padding-left:6px;}
+.T-textarea{border: 1px solid #d1cdcd;padding-left:37px;padding-right:7px;width:290px;height: 40px;border-radius: 3px;}
+.backimg{position:absolute;left:199px;top:179px;width:18px;height:18px;}
+tr{
+    display:block; 
+    margin:15px; 
+    }
+    
+ .redBack{
+   box-shadow: #a5ab97 0px 0px 6px;
+   -moz-box-shadow: #a5ab97 0px 0px 6px;
+   -webkit-box-shadow: #a5ab97 0px 0px 6px;
+}
+.ico-start{background: #609d5a;font-size: 13px;color:#fff;text-align: center;margin-top: 3px;vertical-align: middle;
+position:absolute;top:25px;left:210px;line-height: 20px;height: 21px;width: 21px;border-radius: 4px;}
+
+.ico-end{background: #e60808;font-size: 13px;color:#fff;text-align: center;margin-top: 3px;vertical-align: middle;
+position:absolute;top:25px;left:497px;line-height: 21px;height: 21px;width: 20px;display: block;border-radius: 4px;}
+.order_passenger .passenger .passenger_id button {
+    width: 122px;
+    height: 36px;
+    float: left;
+    background: #01A796;
+    color: #fff;
+    line-height: 36px;
+    text-align: center;
+    font-size: 14px;
+    display: inline-block;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.8s;
+}
+</style>
+<body>
+<!--------顶部----------->
+<div class="header_search">
+    <div class="logo">
+        <a href="#"><img src="images/logo.png" alt="" class="img-responsive"></a>
+    </div>
+    <div class="header_hotline">
+        <span>您好，<b>不一样6250349</b></span>
+        <span>24小时服务热线：<i>400-000-0000</i></span>
+    </div>
+    <div style="clear: both;"></div>
+</div>
+<!----------内容部分--------->
+<div class="order_process">
+    <ul>
+        <li class="active">
+            <span>填写订单</span>
+            <b></b>
+            <i></i>
+        </li>
+        <li>
+            <span>在线支付</span>
+            <b></b>
+            <i></i>
+        </li>
+        <li>
+            <span>预定成功</span>
+            <b></b>
+            <i></i>
+        </li>
+    </ul>
+</div>
+<div class="order">
+    <div class="order_left">
+        <div class="order_tips">
+            <h5>温馨提示：</h5>
+            <p>
+                1. 航班价格变动频繁，请尽快完成订单填写并进行支付完成订单。（票价和退改签规则请以支付时为准）<br/>
+                2. 预订成功后不享受多退少补政策。若退票申请成功，退款将在7-15个工作日左右退还至您的支付账户中，请注意查收。<br/>
+                3. 资料填写过程中若有疑问请联系客服：400-000-0000
+            </p>
+        </div>
+       
+<div class="order_passenger">
+         <div class="inner" style="position:relative">    
+ <label style="font-size:16px;font-weight:bold; word-spacing:9px; letter-spacing: 1px;">车次填写</label><br><br>                          
+	 <form id="addTrainTicketForm" name="trainOrder" action="/WBMall/Index/Train/TrainBooking.html" method="post">
+	      <table style="border-collapse：collapse;position:relative">
+	   
+	       <tbody><tr>
+	         <td><input name="deptcity" placeholder="始发站" class="trainText"><span class="ico-start">始</span></td>
+	         <td width="50px;" align="center"><span style="color:#848484">——</span></td>
+	         <td> <input name="arrcity" placeholder="抵达城市" class="trainText"><span class="ico-end">终</span></td>
+	       </tr>
+	         <tr>
+	        
+	          <td><input name="trainno" placeholder="车次号如 &nbsp;'D123，K123&nbsp;'" class="trainText"></td>
+	          <td width="50px;"></td>
+	          <td><input name="depttime" placeholder="出发日期" id="godatetime" class="trainText" onfocus="WdatePicker({isShowClear:true,readOnly:true,minDate:'2017-07-03',maxDate:'2017-08-02'})" onchange="timeschange()"></td>
+	       </tr>
+	     
+	       <tr>
+	         <td>
+	         <select id="trainSeatLevel.id" name="trainSeatLevel.id" style="border: 1px solid #d1cdcd;border-radius: 3px;width:150px;height: 40px;padding-left:6px;"><option value="" selected="selected">请选择</option><option value="1">商务座</option><option value="2">一等座</option><option value="3">二等座</option><option value="4">软卧</option><option value="5">硬卧</option><option value="6">硬座</option><option value="7">无座</option></select>
+	         </td>
+	           <td width="20px;"></td>
+	         <td>
+	         <input autocomplete="off" id="editable-select" placeholder="选择或输入备注" name="remark" class="es-input selecttrainText" type="text"> 
+	        
+	         
+	         <ul class="es-list"><li class="es-visible">无指定座位时可自动升降座位等级</li><li class="es-visible">可接受两个小时左右时间差</li><li class="es-visible">尽量选择早上的车次</li><li class="es-visible">尽量选择晚上的车次</li></ul></td>
+	       </tr>
+	     </tbody></table>
+
+  </form></div>
+        </div>
+
+
+
+<div class="order_passenger" id="TrainBookingChooseCustomer">
+
+
+
+
+
+       <script src="/WBMall/assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+            <h3>乘客信息</h3>
+<script>                                        
+if($("#openoff").val()=='on'){
+clickmore();
+}
+</script>
+	<div class="form-group form-md-checkboxes" style="position:relative">
+	
+	<br>	
+	<div class="md-checkbox-inline checkboxactive" id="checkboxinline">
+   
+			<div class="md-checkbox">
+			<input id="ckcontact26" value="26" onclick="TrainBookChangeContact(26,'ckcontact26');" checked="" type="checkbox">
+				<label for="ckcontact26"> <span></span> <span class="check"></span>
+					<span class="box"></span> 巫乐榕
+
+				</label>
+			</div>
+  
+			<div class="md-checkbox">
+			<input id="ckcontact38" value="38" onclick="TrainBookChangeContact(38,'ckcontact38');" type="checkbox">
+				<label for="ckcontact38"> <span></span> <span class="check"></span>
+					<span class="box"></span> 薛勇旭
+
+				</label>
+			</div>
+  
+			<div class="md-checkbox">
+			<input id="ckcontact123" value="123" onclick="TrainBookChangeContact(123,'ckcontact123');" type="checkbox">
+				<label for="ckcontact123"> <span></span> <span class="check"></span>
+					<span class="box"></span> 文大凤
+
+				</label>
+			</div>
+  
+			<div class="md-checkbox">
+			<input id="ckcontact135" value="135" onclick="TrainBookChangeContact(135,'ckcontact135');" type="checkbox">
+				<label for="ckcontact135"> <span></span> <span class="check"></span>
+					<span class="box"></span> 温晓峰
+
+				</label>
+			</div>
+  
+			<div class="md-checkbox">
+			<input id="ckcontact213" value="213" onclick="TrainBookChangeContact(213,'ckcontact213');" type="checkbox">
+				<label for="ckcontact213"> <span></span> <span class="check"></span>
+					<span class="box"></span> 柏鑫平
+
+				</label>
+			</div>
+  
+			<div class="md-checkbox">
+			<input id="ckcontact214" value="214" onclick="TrainBookChangeContact(214,'ckcontact214');" type="checkbox">
+				<label for="ckcontact214"> <span></span> <span class="check"></span>
+					<span class="box"></span> 马畅
+
+				</label>
+			</div>
+  
+			<div class="md-checkbox">
+			<input id="ckcontact220" value="220" onclick="TrainBookChangeContact(220,'ckcontact220');" type="checkbox">
+				<label for="ckcontact220"> <span></span> <span class="check"></span>
+					<span class="box"></span> 温晓芳
+
+				</label>
+			</div>
+  
+			<div class="md-checkbox">
+			<input id="ckcontact221" value="221" onclick="TrainBookChangeContact(221,'ckcontact221');" type="checkbox">
+				<label for="ckcontact221"> <span></span> <span class="check"></span>
+					<span class="box"></span> 吴涛童
+
+				</label>
+			</div>
+  
+			<div class="md-checkbox">
+			<input id="ckcontact222" value="222" onclick="TrainBookChangeContact(222,'ckcontact222');" type="checkbox">
+				<label for="ckcontact222"> <span></span> <span class="check"></span>
+					<span class="box"></span> 王丹
+
+				</label>
+			</div>
+  
+			<div class="md-checkbox">
+			<input id="ckcontact223" value="223" onclick="TrainBookChangeContact(223,'ckcontact223');" type="checkbox">
+				<label for="ckcontact223"> <span></span> <span class="check"></span>
+					<span class="box"></span> 测试人
+
+				</label>
+			</div>
+  
+			<div class="md-checkbox">
+			<input id="ckcontact224" value="224" onclick="TrainBookChangeContact(224,'ckcontact224');" type="checkbox">
+				<label for="ckcontact224"> <span></span> <span class="check"></span>
+					<span class="box"></span> 李涛如
+
+				</label>
+			</div>
+  
+			<div class="md-checkbox">
+			<input id="ckcontact230" value="230" onclick="TrainBookChangeContact(230,'ckcontact230');" type="checkbox">
+				<label for="ckcontact230"> <span></span> <span class="check"></span>
+					<span class="box"></span> 居觅云
+
+				</label>
+			</div>
+  
+			<div class="md-checkbox">
+			<input id="ckcontact231" value="231" onclick="TrainBookChangeContact(231,'ckcontact231');" type="checkbox">
+				<label for="ckcontact231"> <span></span> <span class="check"></span>
+					<span class="box"></span> 余水冬
+
+				</label>
+			</div>
+  
+			<div class="md-checkbox">
+			<input id="ckcontact253" value="253" onclick="TrainBookChangeContact(253,'ckcontact253');" type="checkbox">
+				<label for="ckcontact253"> <span></span> <span class="check"></span>
+					<span class="box"></span> 谢大脚
+
+				</label>
+			</div>
+  
+			<div class="md-checkbox">
+			<input id="ckcontact325" value="325" onclick="TrainBookChangeContact(325,'ckcontact325');" type="checkbox">
+				<label for="ckcontact325"> <span></span> <span class="check"></span>
+					<span class="box"></span> 文培凤
+
+				</label>
+			</div>
+  
+			<div class="md-checkbox">
+			<input id="ckcontact397" value="397" onclick="TrainBookChangeContact(397,'ckcontact397');" type="checkbox">
+				<label for="ckcontact397"> <span></span> <span class="check"></span>
+					<span class="box"></span> 手机测试
+
+				</label>
+			</div>
+  
+			<div class="md-checkbox">
+			<input id="ckcontact398" value="398" onclick="TrainBookChangeContact(398,'ckcontact398');" type="checkbox">
+				<label for="ckcontact398"> <span></span> <span class="check"></span>
+					<span class="box"></span> 曹操
+
+				</label>
+			</div>
+  
+			<div class="md-checkbox">
+			<input id="ckcontact399" value="399" onclick="TrainBookChangeContact(399,'ckcontact399');" type="checkbox">
+				<label for="ckcontact399"> <span></span> <span class="check"></span>
+					<span class="box"></span> 石炳海
+
+				</label>
+			</div>
+  
+			<div class="md-checkbox">
+			<input id="ckcontact400" value="400" onclick="TrainBookChangeContact(400,'ckcontact400');" type="checkbox">
+				<label for="ckcontact400"> <span></span> <span class="check"></span>
+					<span class="box"></span> 马毅球
+
+				</label>
+			</div>
+  
+			<div class="md-checkbox">
+			<input id="ckcontact401" value="401" onclick="TrainBookChangeContact(401,'ckcontact401');" type="checkbox">
+				<label for="ckcontact401"> <span></span> <span class="check"></span>
+					<span class="box"></span> 唐河
+
+				</label>
+			</div>
+  
+
+		</div>
+		
+		   <div class="hovermore">
+		       <a class="moreperson" href="javascript:;" onclick="clickmore()"><span class="changetext">更多联系人</span>
+		         <img src="/WBMall/assets/images/arrow_down.png" class="arrow_down" alt=""></a>
+		   </div>
+		
+	</div>
+	<br>
+
+            <div class="passenger">
+                <b>1</b>
+                <div class="passenger_id">
+                    <span><i>
+                      
+                    
+                    成人
+                    </i></span>
+                    <span style="margin-left:10px;margin-right:10px;width:250px;"><i>巫乐榕</i></span>
+                <button type="button" onclick="submitEditContact(26)">修改信息</button>
+                </div>
+                <div class="passenger_id" style="margin-top: 10px;">
+                    <span><i>  
+                    二代身份证
+                      
+                    </i></span>
+                    <span style="margin-left:10px;margin-right:10px;width:250px;"><i>331***********0610</i></span>
+                </div>
+                 <div class="passenger_id">
+                    <span><i>  18270887656
+                    </i></span>
+                </div>
+            </div>
+          
+
+            <div class="passenger_add">
+                <button type="button" onclick="submitBookingContact()">+添加乘客</button>
+            </div>
+  
+            </div>
+
+
+
+
+        <div class="order_contact">
+            <h3>联系人</h3>
+            <div class="contact_li">
+                <input type="text" placeholder="联系人姓名" class="name">
+            </div>
+            <div class="contact_li">
+                <span><i>中国移动0086</i><img src="images/slide_down.png" alt=""></span>
+                <ul>
+                    <li>中国移动0086</li>
+                    <li>中国联通0010</li>
+                    <li>中国电信0000</li>
+                </ul>
+                <input type="text" placeholder="请输入您的手机号码" class="mobile">
+            </div>
+            <div class="contact_li">
+                <input type="text" placeholder="邮箱，接收订单信息(选填)" class="email">
+            </div>
+        </div>
+     
+        <div class="order_submit">
+            <span><b></b>我已阅读<a href="#">《购票须知》</a>,<a href="#">《航空意外险A款》</a>,<a href="#">《航空意外险B款》</a>,<a href="#">《航空延误险》</a>保险条款及免除责任且同意按此协议执行。</span>
+            <a href="payment.html"><button type="submit">提交订单</button></a>
+        </div>
+    </div>
+    <div class="order_right">
+        
+        </div>
+
+
+
+
+
+
+    </div>
+    <div style="clear: both;"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!----------底部----------->
+<div class="footer">
+    <div class="container">
+        <div class="foot_li">
+            <img src="images/foot_liaoyang.png" alt="">
+            <ul>
+                <li><b>疗养服务</b></li>
+                <li><a href="#">疗养线路</a></li>
+                <li><a href="#">疗养院</a></li>
+                <li><a href="#">疗养产品</a></li>
+            </ul>
+        </div>
+        <div class="foot_li">
+            <img src="images/foot_piaowu.png" alt="">
+            <ul>
+                <li><b>票务服务</b></li>
+                <li><a href="#">国内机票</a></li>
+                <li><a href="#">国际机票</a></li>
+                <li><a href="#">火车票</a></li>
+            </ul>
+        </div>
+        <div class="foot_li">
+            <img src="images/foot_hotel.png" alt="">
+            <ul>
+                <li><b>酒店服务</b></li>
+                <li><a href="#">酒店预订</a></li>
+                <li><a href="#">三星级</a></li>
+                <li><a href="#">四星级</a></li>
+                <li><a href="#">五星级</a></li>
+            </ul>
+        </div>
+        <div class="foot_li">
+            <img src="images/foot_spot.png" alt="">
+            <ul>
+                <li><b>景点门票</b></li>
+                <li><a href="#">当季精选</a></li>
+                <li><a href="#">周边城市</a></li>
+                <li><a href="#">热门城市</a></li>
+                <li><a href="#">游玩主题</a></li>
+            </ul>
+        </div>
+        <div class="foot_li">
+            <img src="images/foot_about.png" alt="">
+            <ul>
+                <li><b>关于我们</b></li>
+                <li><a href="#">企业简介</a></li>
+                <li><a href="#">媒体报道</a></li>
+                <li><a href="#">客户服务</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="footer_nav"></div>
+<div class="footer_copyright">
+    <div class="container">
+        <ul>
+            <li><a href="#">关于文博疗养</a></li>
+            <li><a href="#">业务合作</a></li>
+            <li><a href="#">加入我们</a></li>
+            <li><a href="#">我要投诉</a></li>
+            <li><a href="#">安全中心</a></li>
+            <li><a href="#">关于我们</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <ul>
+            <li><b>Copyright ©2016 xxxxx.com   赣ICP备05021087号</b></li>
+            <li><b>文博疗养网客服电话12345678</b></li>
+        </ul>
+    </div>
+    <div class="container">
+        <img src="images/foot_copyright.jpg" alt="">
+    </div>
+</div>
+</body>
+</html>

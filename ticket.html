@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>门票</title>
+    <link rel="stylesheet" href="css/style.css">
+	      <link rel="stylesheet" href="css/search-box.css">
+<link rel="stylesheet" href="css/ticket_search.new.css">
+      <link rel="stylesheet" href="css/index_3.css">
+<link rel="stylesheet" href="css/index_2.css">
+<link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/selectivizr-min.js"></script>
+    <script src="js/style.js"></script>
+</head>
+
+ <style>
+ 
+route_right_hot a.more{width: 60px;height: 20px;border: 1px solid #ececec;border-radius: 11px;position: absolute;top:20px;right:30px;line-height: 20px;text-align: center;font-size: 12px;color: #999;transition: 0.8s;}
+route_right_hot a.more:hover{border-color: #ff9a00;background: #ff9a00;color: #fff;transition: 0.8s;}
+ .route_right{width: 270px;height:auto;float: right;margin-top: 12px;}
+
+#moreAdvertList{width: 60px;height: 20px;border: 1px solid #ececec;border-radius: 11px;position: absolute;top:20px;right:30px;line-height: 20px;text-align: center;font-size: 12px;color: #999;transition: 0.8s;}
+#moreAdvertList:hover{border-color: #ff9a00;background: #ff9a00;color: #fff;transition: 0.8s;}
+
+
+
+
+ #moreA{color:#5D99D4}
+#moreA:hover{color:#FF6600}
+.filterlyh_li ul li.actives input{background-color:#FF9900;color:#fff}
+.filterlyh_li ul li{position:relative;left:10px;}
+.filterlyh_li ul li input{min-width: 80px;min-height: 26px;margin-top:6px;border:0px;background:#fff;color:#404040;margin:5px;5px;}
+.filterlyh_li ul li input:hover{background: #FFEBCD;color:#404040}
+filterlyh_li filterlyh_first input{max-width: 30px;}
+ 
+ 
+ 
+.filterlyh{width: 1197px;height: auto;border:1px solid #ececec;margin:10px auto 10px;/*padding:0 20px;*/position: relative;z-index: 2;}
+ /* 必改  height：40    */ 
+.filterlyh .filterlyh_li{width: 1158px;height: auto;border-top: 1px solid #ececec;float: left;position: relative;}
+
+.filterlyh .filterlyh_li:nth-child(4){z-index: 5;}
+.filterlyh .filterlyh_li:nth-child(5){z-index: 4;}
+.filterlyh .filterlyh_li.filterlyh_first{border-top:none;}
+.filterlyh .filterlyh_li.none{display: none;}
+.filterlyh_li b{padding-left: 10px;width: 80px;height: 40px;float: left;display: inline-block;font-size: 13px;color: #555;line-height: 40px;text-align: left;font-weight:normal;background-color: #f1ffcf;}
+.filterlyh_li i{width: 80px;height: 40px;float: left;display: inline-block;color: #00aef3;line-height: 40px;font-size: 12px;font-style: normal;text-align: center;cursor: pointer;font-weight: bold;}
+.filterlyh_li i.on{font-weight: normal;color: #333;}
+ /* 必改 height：40    */ 
+.filterlyh_li ul{width: 960px;height: auto;display: inline-block;float: left;max-width: 990px;overflow: hidden;}
+ /* 必改*/ 
+.filterlyh_li ul li{float: left;height: auto;display: inline-block;overflow: hidden;}
+
+.icon_filter_pri,.icon_filter_star,.icon_filter_serv,.icon_filter_theme,.icon_filter_posi,.icon_search{display: inline-block;background: url(<%=path%>/assets/images/iconwb.png) no-repeat;vertical-align: middle;overflow: hidden;}
+.icon_filter_pri {
+    width: 18px;
+    height: 18px;
+    background-position: -119px -4px;
+}
+
+.icon_filter_star {
+    width: 18px;
+    height: 18px;
+    background-position: -141px -4px;
+}
+.icon_search {
+    width: 18px;
+    height: 17px;
+    background-position: -71px -78px;
+}
+.icon_filter_serv{width:18px;height:19px;background-position:-206px -1px;}
+.icon_filter_theme{width:18px;height:18px;background-position:-186px -3px;}
+.icon_filter_posi{width:18px;height:18px;background-position:-98px -3px;}
+
+.more a{display:inline-block;width:21px;height:21px;background:url(http://simg1.qunarzz.com/hotel/listnew/filter_bg.png) left -219px no-repeat}
+.more a:hover{background-position:-0px -240px}
+#sel{border:1px #D6D6D6 solid; width:77px;}
+.ba{background-color:#48D1CC;border:0px;color:#fff;width:65px;height:30px;}
+.ba:hover{background-color:#20B2AA;}
+#citybox{display:none;position:absolute;top:277px;left:110px;width:900px;height:340px;border:1px solid;border-color:#CCCCCC;background-color:#fff;z-index:999;}
+#alltype{position:absolute;top:14px;left:610px;}
+#openall{display:none;position:absolute;top:22px;left:631px;width:360px;height:130px;border:1px solid;border-color:#CCCCCC;background-color:#fff}
+dl{clear:left;}
+dt,dd{float:left;width:70px;}
+dd a{color:#7A7A7A;font-size: 13px;}
+dd a:hover{color:#20B2AA;}
+dt{color:#009ACD;}
+a{text-decoration:none;}
+a:hover{text-decoration:none;}
+
+select {
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    padding-right: 14px;
+    background: url("/WBMall/assets/arrow.png") no-repeat scroll right center transparent;
+
+}
+</style>
+<body>
+<!--------顶部----------->
+<div class="header_top">
+    <div class="container">
+        <div class="left">
+            <span>文博疗养欢迎您！</span>
+            <b><img src="images/phone.png" alt="" class="phone">手机客户端下载</b>
+        </div>
+        <div class="right">
+             <ul>
+                <li>尊敬的  <font color="red" >中国</font> 您好!</li>
+				<li>疗养币余额：200.3&nbsp;&nbsp;&nbsp;账户余额：10</li>
+                <li>|</li>
+                <li class="li_drop">
+                    <a href="member.html">会员中心<img src="images/arrow_down.png" class="arrow_down" alt=""></a>
+                    <ul>
+                        <li><a href="personal_order.html">全部订单</a></li>
+                        <li><a href="personal_info.html">个人信息</a></li>
+                        <li><a href="javascript:;">全部疗养币</a></li>
+                        <li><a href="personal_pass.html">登录密码</a></li>
+                    </ul>
+                </li>
+                <li><a href="login.html">退出</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="header_search">
+    <div class="logo">
+        <a href="#"><img src="images/logo.png" alt="" class="img-responsive"></a>
+    </div>
+    <div class="header_mid">
+  
+      
+    </div>
+    <div class="header_contact">
+        <ul>
+            <li>
+                <img src="images/header_kefu.png" alt="">
+                <span>欢迎使用</span><br/>
+                <a href="#">在线客服</a>
+            </li>
+            <li>
+                <img src="images/header_tel.png" alt="">
+                <span>24h客户服务电话</span><br/>
+                <a href="#">400-8888-888</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-----------导航------------>
+<div class="header_nav">
+    <div class="container">
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="route.html">疗养线路</a></li>
+            <li><a href="plane.html">飞机票</a></li>
+            <li><a href="train.html">火车票</a></li>
+            <li><a href="hotel.html">疗养院</a></li>
+            <li><a href="hotel.html">酒店</a></li>
+            <li class="active"><a href="ticket.html">景点门票</a></li>
+            <li><a href="#">手信</a></li>
+        </ul>
+    </div>
+</div>
+<!---------------内容部分------------>
+<div class="location">
+    <span><a href="#">首页</a>><a href="ticket.html">门票</a></span>
+</div>
+<div class="hotel_search">
+    <div class="hotel_city">
+        <span>
+        
+            <input placeholder="城市名称" id="cityname" name="cityname" onclick="display()" style="width:350px;" value="" type="text">
+            <img src="/WBMall/assets/images/site.png" alt="">
+        </span>
+    </div>
+    <div class="hotel_site" id="inputsite" contenteditable="true">
+        <span>
+            <input placeholder="景点名称" style="width:300px;" name="select" id="select" value="" type="text">
+        </span>
+    </div>
+    <button type="button" class="search" onclick="submitscan()"><span class="icon_search mr10"></span>&nbsp;搜索</button>
+   
+</div><br/>
+
+
+
+<div class="filterlyh">
+		<div class="filter_li_first">
+		  	 <div id="Divthems" class="filterlyh_li"><b><span class="icon_filter_theme"></span>&nbsp;主题</b>
+                 <ul>
+                   <li class="actives" placeact=""><input value="不&nbsp;限" type="button"></li>
+                
+						<li date-starrate="湖光山色" placeact="湖光山色"><input value="湖光山色(83)" type="button"></li>
+						
+					
+						<li date-starrate="主题乐园" placeact="主题乐园"><input value="主题乐园(37)" type="button"></li>
+						
+					
+						<li date-starrate="古迹遗址" placeact="古迹遗址"><input value="古迹遗址(32)" type="button"></li>
+						
+					
+						<li date-starrate="田园度假" placeact="田园度假"><input value="田园度假(29)" type="button"></li>
+						
+					
+						<li date-starrate="民俗风情" placeact="民俗风情"><input value="民俗风情(22)" type="button"></li>
+						
+					
+						<li date-starrate="水乡古镇" placeact="水乡古镇"><input value="水乡古镇(21)" type="button"></li>
+						
+					
+						<li date-starrate="温泉" placeact="温泉"><input value="温泉(18)" type="button"></li>
+						
+					
+						
+						
+					
+                  
+				   </div> 	
+					
+               </ul>
+            </div>
+			
+			
+			
+			
+			<div style="clear: both"></div>
+		</div>
+	</div>
+
+
+
+
+<div class="route">
+    <div class="route_left">
+       
+<div class="product-list">
+
+<!-- 第一个 -->
+ 
+<div class="product-item product-ticket clearfix">
+    <div class="product-regular clearfix">
+
+        <!--产品图片 开始-->
+        <a href="javascript:;" title="三清山" class="product-picture">
+            <img src="images/1-t.jpg" alt="" width="210" height="140">
+        </a>
+        <!--产品图片 结束-->
+        <!--产品区域 开始-->
+        <div class="product-section">
+            <h3 class="product-ticket-title">
+                <a class="name highlighterAll highlighterDistrict"  href="javascript:;">三清山</a>
+                <span class="city highlighterAll highlighterDistrict">
+                
+                 [江西·上饶] 
+                </span>
+                <span class="level" title="等级">AAAAA</span>
+                
+						
+            </h3>
+                <dl class="product-details clearfix">
+                    <dt>景点地址</dt>
+                    <dd>
+                    		江西省上饶地区的玉山和德兴两县交界处
+                    </dd>
+                </dl>
+            
+            <dl class="product-details clearfix">
+                <dt>营业时间</dt>
+                <dd>
+                	 <div class="product-ticket-dropdown">
+                        <i></i>2月-12月,周一至周五 8:00 - 17:00<br>2月-12月,周末 7:00 - 17:30<br>1月 8:30 - 16:30<br>
+                    </div>
+                </dd>
+            </dl>
+            
+            <dl class="product-details clearfix">
+                <dt>主　　题</dt>
+                <dd class="highlighterSubjectTag highlighterAll">湖光山色、
+                </dd>
+            </dl>
+            
+            <dl class="product-details clearfix">
+                <dt>特　　色</dt>
+                <dd>
+                    <div class="product-ticket-dropdown">
+                        	<i></i>
+                        	<a href="javascript:void(0);" hidefocus="false">世界自然遗产！、云雾之乡，松石画廊！、日出时分群峰竞秀、气象万千！、西太平洋边缘美丽花岗岩！、
+                        	</a>
+						
+                    </div>
+                </dd>
+            </dl>
+        </div>
+        <!--产品区域 结束-->
+
+
+        <!--产品简介 开始-->
+        <div class="product-info">
+            <div class="product-price">
+                    <b>¥</b><em>220.00</em><i>起</i>
+            </div>
+            <a  href="ticketshow.html" class="btn btn-orange btn-lg product-view">查看详情</a>
+
+
+        </div>
+        <!--产品简介 结束-->
+
+    </div>
+
+    <div class="product-special">
+    </div>
+	
+	 <!--门票 END-->
+    <!--推荐	<div class="search_icon tip_content"></div> -->
+	
+</div>
+
+<div class="product-item product-ticket clearfix">
+    <div class="product-regular clearfix">
+
+        <!--产品图片 开始-->
+        <a href="javascript:;" title="井冈山" class="product-picture">
+            <img src="images/2-t.jpg" alt="" width="210" height="140">
+        </a>
+        <!--产品图片 结束-->
+        <!--产品区域 开始-->
+        <div class="product-section">
+            <h3 class="product-ticket-title">
+                <a class="name highlighterAll highlighterDistrict"  href="javascript:;">井冈山</a>
+                <span class="city highlighterAll highlighterDistrict">
+                
+                 [江西·吉安] 
+                </span>
+                <span class="level" title="等级">AAAAA</span>
+                
+						
+            </h3>
+                <dl class="product-details clearfix">
+                    <dt>景点地址</dt>
+                    <dd>
+                    		江西省吉安市井冈山市茨坪镇井冈山风景名胜区
+                    </dd>
+                </dl>
+            
+            <dl class="product-details clearfix">
+                <dt>营业时间</dt>
+                <dd>
+                	 <div class="product-ticket-dropdown">
+                        <i></i> 8:00 - 17:30<br>
+                    </div>
+                </dd>
+            </dl>
+            
+            <dl class="product-details clearfix">
+                <dt>主　　题</dt>
+                <dd class="highlighterSubjectTag highlighterAll">湖光山色、
+                </dd>
+            </dl>
+            
+            <dl class="product-details clearfix">
+                <dt>特　　色</dt>
+                <dd>
+                    <div class="product-ticket-dropdown">
+                        	<i></i>
+                        	<a href="javascript:void(0);" hidefocus="false">中国革命的摇篮、瞻仰红色革命遗迹，欣赏养眼自然风光、登黄洋界哨口，遥想当年革命热血精神，观壮美云海、杜鹃山，看满山遍野的杜鹃铺于脚下，犹如一道美丽的彩虹、
+                        	</a>
+						
+                    </div>
+                </dd>
+            </dl>
+        </div>
+        <!--产品区域 结束-->
+
+
+        <!--产品简介 开始-->
+        <div class="product-info">
+            <div class="product-price">
+                    <b>¥</b><em>20.00</em><i>起</i>
+            </div>
+            <a  href="ticketshow.html" class="btn btn-orange btn-lg product-view">查看详情</a>
+
+
+        </div>
+        <!--产品简介 结束-->
+
+    </div>
+
+    <div class="product-special">
+    </div>
+	
+	 <!--门票 END-->
+    <!--推荐	<div class="search_icon tip_content"></div> -->
+	
+</div>
+
+<div class="product-item product-ticket clearfix">
+    <div class="product-regular clearfix">
+
+        <!--产品图片 开始-->
+        <a href="javascript:;"  title="九寨沟" class="product-picture">
+            <img src="images/3-t.jpg" alt="" width="210" height="140">
+        </a>
+        <!--产品图片 结束-->
+        <!--产品区域 开始-->
+        <div class="product-section">
+            <h3 class="product-ticket-title">
+                <a class="name highlighterAll highlighterDistrict" href="javascript:;">九寨沟</a>
+                <span class="city highlighterAll highlighterDistrict">
+                
+                 [四川·阿坝] 
+                </span>
+                <span class="level" title="等级">AAAAA</span>
+                
+						
+            </h3>
+                <dl class="product-details clearfix">
+                    <dt>景点地址</dt>
+                    <dd>
+                    		四川省阿坝藏族羌族自治州九寨沟县
+                    </dd>
+                </dl>
+            
+            <dl class="product-details clearfix">
+                <dt>营业时间</dt>
+                <dd>
+                	 <div class="product-ticket-dropdown">
+                        <i></i>旺季（4月01日-11月15日），7:45分入园。 7:00 - 19:00<br>淡季（11月16日-次年3月31日），8:45入园。 8:30 - 17:30<br>
+                    </div>
+                </dd>
+            </dl>
+            
+            <dl class="product-details clearfix">
+                <dt>主　　题</dt>
+                <dd class="highlighterSubjectTag highlighterAll">湖光山色、
+                </dd>
+            </dl>
+            
+            <dl class="product-details clearfix">
+                <dt>特　　色</dt>
+                <dd>
+                    <div class="product-ticket-dropdown">
+                        	<i></i>
+                        	<a href="javascript:void(0);" hidefocus="false">九寨六绝：翠海、叠瀑、彩林、雪峰、藏情、蓝冰、九寨沟是以保护自然风景为主要目的的自然保护区、九寨沟自然保护区内有108个高山湖泊，最大的湖泊为长海子、动植物资源丰富，具有极高的生态保护、科学研究和美学旅游价值、
+                        	</a>
+						
+                    </div>
+                </dd>
+            </dl>
+        </div>
+        <!--产品区域 结束-->
+
+
+        <!--产品简介 开始-->
+        <div class="product-info">
+            <div class="product-price">
+                    <b>¥</b><em>8.00</em><i>起</i>
+            </div>
+            <a  href="ticketshow.html" class="btn btn-orange btn-lg product-view">查看详情</a>
+
+
+        </div>
+        <!--产品简介 结束-->
+
+    </div>
+
+    <div class="product-special">
+    </div>
+	
+	 <!--门票 END-->
+    <!--推荐	<div class="search_icon tip_content"></div> -->
+	
+</div>
+
+
+
+
+
+<div class="product-item product-ticket clearfix">
+    <div class="product-regular clearfix">
+
+        <!--产品图片 开始-->
+        <a href="javascript:;"  title="九皇山" class="product-picture">
+            <img src="images/4-t.jpg" alt="" width="210" height="140">
+        </a>
+        <!--产品图片 结束-->
+        <!--产品区域 开始-->
+        <div class="product-section">
+            <h3 class="product-ticket-title">
+                <a class="name highlighterAll highlighterDistrict">九皇山</a>
+                <span class="city highlighterAll highlighterDistrict">
+                
+                 [四川·绵阳] 
+                </span>
+                <span class="level" title="等级">AAAA</span>
+                
+						
+            </h3>
+                <dl class="product-details clearfix">
+                    <dt>景点地址</dt>
+                    <dd>
+                    		四川省绵阳市北川羌族自治县桂溪乡
+                    </dd>
+                </dl>
+            
+            <dl class="product-details clearfix">
+                <dt>营业时间</dt>
+                <dd>
+                	 <div class="product-ticket-dropdown">
+                        <i></i> 8:00 - 18:00<br>
+                    </div>
+                </dd>
+            </dl>
+            
+            <dl class="product-details clearfix">
+                <dt>主　　题</dt>
+                <dd class="highlighterSubjectTag highlighterAll">湖光山色、
+                </dd>
+            </dl>
+            
+            <dl class="product-details clearfix">
+                <dt>特　　色</dt>
+                <dd>
+                    <div class="product-ticket-dropdown">
+                        	<i></i>
+                        	<a href="javascript:void(0);" hidefocus="false">高山溶洞地貌，气势十分雄伟，具有很好的观赏价值、集科考、观光、避署、会议、蹬山运动旅游、羌族风情旅游为一体、景区奇、秀、雄、险、绝，泥盆系地质出露完整，如地质博物馆、树木茂盛，古藤缠绕，生长着多种珍稀树种和生活着多种珍稀动物、
+                        	</a>
+						
+                    </div>
+                </dd>
+            </dl>
+        </div>
+        <!--产品区域 结束-->
+
+
+        <!--产品简介 开始-->
+        <div class="product-info">
+            <div class="product-price">
+                    <b>¥</b><em>79.90</em><i>起</i>
+            </div>
+            <a  href="ticketshow.html" class="btn btn-orange btn-lg product-view">查看详情</a>
+
+
+        </div>
+        <!--产品简介 结束-->
+
+    </div>
+
+    <div class="product-special">
+    </div>
+	
+	 <!--门票 END-->
+    <!--推荐	<div class="search_icon tip_content"></div> -->
+	
+</div>
+
+
+<!-- 第一个结束 -->
+
+
+
+
+
+
+      <div class="page_next">
+        <!-- 没有记录，就不显示 -->
+
+<!--显示分页信息-->
+
+            <ul>
+                <a href="#" hidefocus="on" onclick="return false;"><li class="on"><b>&lt;</b>上一页</li></a>
+                
+
+
+
+
+
+
+<a href="#" hidefocus="on" onclick="return false;" data-page="1"><li class="active">1</li></a>
+
+<a href="#" hidefocus="on" onclick="return false;" data-page="2"><li>2</li></a>
+
+<a href="#" hidefocus="on" onclick="return false;" data-page="3"><li>3</li></a>
+
+<a href="#" hidefocus="on" onclick="return false;" data-page="4"><li>4</li></a>
+
+<a href="#" hidefocus="on" onclick="return false;" data-page="5"><li>5</li></a>
+
+
+		<!-- 显示尾页链接 -->
+		<a href="#" hidefocus="on" onclick="return false;" data-page="11"><li class="on">..11</li></a>
+	
+<a href="#" hidefocus="on" onclick="return false;" data-page="2"><li class="on">下一页<i>&gt;</i></li></a>
+            </ul>
+            <a>总记录数：219条</a>
+            
+        </div>
+
+</div>
+
+
+
+    </div>
+    <div class="route_right">
+        <div class="route_right_hot">
+            <h3>推荐热门线路产品</h3>
+            <ul>
+                <li>
+                    <a href="#">
+                        <i>1</i>
+                        <span>广州长隆野生动物园-珠海长隆海洋王国双飞半自助4日游2晚5星长隆狩猎房，含大马戏，报名立减</span>
+                        <b>￥6799起</b>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i>2</i>
+                        <span>广州长隆野生动物园-珠海长隆海洋王国双飞半自助4日游2晚5星长隆狩猎房，含大马戏，报名立减</span>
+                        <b>￥6799起</b>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i>3</i>
+                        <span>广州长隆野生动物园-珠海长隆海洋王国双飞半自助4日游2晚5星长隆狩猎房，含大马戏，报名立减</span>
+                        <b>￥6799起</b>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i>4</i>
+                        <span>广州长隆野生动物园-珠海长隆海洋王国双飞半自助4日游2晚5星长隆狩猎房，含大马戏，报名立减</span>
+                        <b>￥6799起</b>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i>5</i>
+                        <span>广州长隆野生动物园-珠海长隆海洋王国双飞半自助4日游2晚5星长隆狩猎房，含大马戏，报名立减</span>
+                        <b>￥6799起</b>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div style="clear: both;"></div>
+</div>
+<!----------底部----------->
+<div class="footer">
+    <div class="container">
+        <div class="foot_li">
+            <img src="images/foot_liaoyang.png" alt="">
+            <ul>
+                <li><b>疗养服务</b></li>
+                <li><a href="#">疗养线路</a></li>
+                <li><a href="#">疗养院</a></li>
+                <li><a href="#">疗养产品</a></li>
+            </ul>
+        </div>
+        <div class="foot_li">
+            <img src="images/foot_piaowu.png" alt="">
+            <ul>
+                <li><b>票务服务</b></li>
+                <li><a href="#">国内机票</a></li>
+                <li><a href="#">国际机票</a></li>
+                <li><a href="#">火车票</a></li>
+            </ul>
+        </div>
+        <div class="foot_li">
+            <img src="images/foot_hotel.png" alt="">
+            <ul>
+                <li><b>酒店服务</b></li>
+                <li><a href="#">酒店预订</a></li>
+                <li><a href="#">三星级</a></li>
+                <li><a href="#">四星级</a></li>
+                <li><a href="#">五星级</a></li>
+            </ul>
+        </div>
+        <div class="foot_li">
+            <img src="images/foot_spot.png" alt="">
+            <ul>
+                <li><b>景点门票</b></li>
+                <li><a href="#">当季精选</a></li>
+                <li><a href="#">周边城市</a></li>
+                <li><a href="#">热门城市</a></li>
+                <li><a href="#">游玩主题</a></li>
+            </ul>
+        </div>
+        <div class="foot_li">
+            <img src="images/foot_about.png" alt="">
+            <ul>
+                <li><b>关于我们</b></li>
+                <li><a href="#">企业简介</a></li>
+                <li><a href="#">媒体报道</a></li>
+                <li><a href="#">客户服务</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="footer_nav"></div>
+<div class="footer_copyright">
+    <div class="container">
+        <ul>
+            <li><a href="#">关于文博疗养</a></li>
+            <li><a href="#">业务合作</a></li>
+            <li><a href="#">加入我们</a></li>
+            <li><a href="#">我要投诉</a></li>
+            <li><a href="#">安全中心</a></li>
+            <li><a href="#">关于我们</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <ul>
+            <li><b>Copyright ©2016 xxxxx.com   赣ICP备05021087号</b></li>
+            <li><b>文博疗养网客服电话12345678</b></li>
+        </ul>
+    </div>
+    <div class="container">
+        <img src="images/foot_copyright.jpg" alt="">
+    </div>
+</div>
+</body>
+</html>

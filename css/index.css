@@ -1,0 +1,546 @@
+@charset "UTF-8";body,button,input,select,textarea{font-family:"Arial","PingFang SC","Microsoft Yahei","SimSun",sans-serif}.hidden{display:none}.search_icon{display:inline-block;overflow:hidden;background:url(http://pic.lvmama.com/img/v6/ticket/ticket_search_icon.png) no-repeat;z-index:20}.tip_content{width:69px;height:69px;background-position:0 0;position:absolute;top:-5px;left:-5px}.everything{background:#f5f5f5}.main{width:1200px;margin:0
+auto;padding-bottom:30px}.all-hot,.beside-sale,.beside-promo{overflow:hidden;position:relative}.all-hot .prev, .all-hot .next, .beside-sale .prev, .beside-sale .next, .beside-promo .prev, .beside-promo
+.next{position:absolute;display:block;width:30px;height:50px;cursor:pointer;background:-webkit-linear-gradient(top, rgba(33, 33, 33, 0.7) 0%, rgba(33, 33, 33, 0.7) 100%);background:linear-gradient(to bottom, rgba(33, 33, 33, 0.7) 0%, rgba(33, 33, 33, 0.7) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3212121', endColorstr='#b3212121', GradientType=0)}.all-hot .prev:hover, .all-hot .next:hover, .beside-sale .prev:hover, .beside-sale .next:hover, .beside-promo .prev:hover, .beside-promo .next:hover{background:-moz-linear-gradient(top, rgba(33, 33, 33, 0.3) 0%, rgba(33, 33, 33, 0.3) 100%);background:-webkit-linear-gradient(top, rgba(33, 33, 33, 0.3) 0%, rgba(33, 33, 33, 0.3) 100%);background:linear-gradient(to bottom, rgba(33, 33, 33, 0.3) 0%, rgba(33, 33, 33, 0.3) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4d212121', endColorstr='#4d212121', GradientType=0)}.all-hot .prev i, .all-hot .next i, .beside-sale .prev i, .beside-sale .next i, .beside-promo .prev i, .beside-promo .next
+i{width:30px;height:50px;display:block}.all-hot .prev, .beside-sale .prev, .beside-promo
+.prev{left:0}.all-hot .prev i, .beside-sale .prev i, .beside-promo .prev
+i{background:url(http://pic.lvmama.com/img/search/v1/search.png) no-repeat -40px -40px}.all-hot .next, .beside-sale .next, .beside-promo
+.next{right:0}.all-hot .next i, .beside-sale .next i, .beside-promo .next
+i{background:url(http://pic.lvmama.com/img/search/v1/search.png) no-repeat -80px -40px}.crumbs{line-height:20px;padding:10px
+0}.crumbs-link{color:#ccc}.crumbs-info{color:#999}.crumbs-link
+a{color:#666;padding:0
+3px}.crumbs-link a:hover{color:#f60}.crumbs-link
+a.current{color:#999;text-decoration:none}.main-search{z-index:3;position:relative;margin-bottom:20px}.lv_search_box{float:left}.btn_type .icon_arrow, .btn_city
+.icon_arrow{background:url(http://pic.lvmama.com/img/search/v1/search.png) no-repeat 0 0;width:11px;height:6px;border:none;right:11px;top:18px}.btn_type{height:40px;overflow:hidden}.btn_type
+b{font-size:16px}.search_city_hover .btn_city .icon_arrow, .search_type_show .btn_type
+.icon_arrow{background:url(http://pic.lvmama.com/img/search/v1/search.png) no-repeat 0 -10px;right:11px;top:18px}.btn_city
+.icon_arrow{background:url(http://pic.lvmama.com/img/search/v1/search.png) no-repeat -20px 0}.search_city_hover .btn_city
+.icon_arrow{background:url(http://pic.lvmama.com/img/search/v1/search.png) no-repeat -20px -10px}.lv_search_box, .search_type, .btn_city, .btn_lv_search, .search_city_hover
+.btn_city{line-height:40px;height:40px}.btn_city b, .btn_city
+span{font-size:14px}.btn_city
+span{float:right;margin-right:30px}.search_city_hover
+.lv_city_down{top:40px}.search_type_tab{border:#e38 solid 1px;width:139px}.search_type_tab
+li{height:40px;line-height:40px;font-size:16px}.search_type_box{width:491px}.search_city{width:141px;height:40px}.search_city_hover{width:142px}.search_type{width:139px;font-size:14px;color:#e38}.lv_search_box{width:735px;border:#e38 solid 3px}.lv_search_box
+.lv_search{width:330px;padding:10px
+10px;font-size:14px}.lv_search_box
+.lv_search.w_380{width:471px}.search_hotel_keyword{margin-top:4px}.lv_search_box
+.lv_search2{padding:10px
+10px;width:310px}.lv_search_box .search_type_box
+.w_160{width:140px}.btn_lv_search{width:105px;background:#e38 none;color:#fff;font-size:16px}.btn_lv_search
+i{width:16px;height:16px;display:block;background:url(http://pic.lvmama.com/img/search/v1/search.png) no-repeat -80px -20px;float:left;margin:12px
+9px 0 25px}.search-hot{width:459px;line-height:46px;float:left;font-size:0;color:#999}.search-hot
+em{font-size:14px;display:block;float:left;width:95px;text-align:right}.search-hot
+a{float:left;display:block;margin-top:10px;border:1px
+solid #ccc;height:24px;line-height:24px;padding:0
+15px;border-radius:12px;color:#333;font-size:14px;margin-right:5px}.search-hot a:hover{color:#f60;border:1px
+solid #f60;background:#fff3e4;text-decoration:none}.search-filter{z-index:2;position:relative;margin-bottom:10px}.search-filter
+a{cursor:pointer}.search-nav-box{width:1200px;border-bottom:2px solid #e38}.search-nav-box.fixed{position:fixed;top:0;background:#fff;z-index:2}.search-nav{float:left;height:41px;border-left:1px solid #ccc;background:#fff}.search-nav
+a{height:40px;line-height:40px;padding:0
+13px;cursor:pointer;float:left;font-size:14px;color:#666;border:1px
+solid #ccc;border-bottom:none;margin-left:-1px}.search-nav a
+b{color:#999;margin-left:7px;font-size:12px;font-weight:normal}.search-nav a:hover, .search-nav a.active, .search-nav a.active:hover{position:relative;border-color:#e38;background:#e38;color:#fff;text-decoration:none}.search-nav a:hover b, .search-nav a.active b, .search-nav a.active:hover
+b{color:#fff}.search-nav a:hover{color:#e38;background:#fef2f9}.search-nav a:hover
+b{color:#e38}.search-more{font-size:16px;color:#666;width:135px;height:41px;float:right}.search-more.active .search-more-dropdown{display:block;border:1px
+solid #ccc;margin-left:0}.search-more.active .search-title
+i{background:url(http://pic.lvmama.com/img/search/v1/search.png) no-repeat -40px -10px}.search-more.active .search-title.pink
+i{background:url(http://pic.lvmama.com/img/search/v1/search.png) no-repeat -60px -10px}.search-title{cursor:pointer;position:relative;border:1px
+solid #ddd;border-bottom:none;width:133px;height:40px;line-height:40px;text-indent:15px}.search-title
+i{right:14px;top:18px;position:absolute;display:block;width:11px;height:6px;background:url(http://pic.lvmama.com/img/search/v1/search.png) no-repeat -40px 0;transition:background 200ms;-webkit-transition:background 200ms}.search-title.pink{background:#e38;border:1px
+solid #e38;color:#fff}.search-title.pink
+i{background:url(http://pic.lvmama.com/img/search/v1/search.png) no-repeat -60px 0}.search-more-dropdown{transition:height 200ms;-webkit-transition:height 200ms;box-shadow:0px 2px 4px 0px rgba(0, 0, 0, 0.08);overflow:hidden;display:none;width:133px;background:#fff;position:relative;margin-left:1px;z-index:1}.search-more-dropdown
+a{display:block;cursor:pointer;height:40px;line-height:40px;text-indent:15px;color:#666}.search-more-dropdown a.active, .search-more-dropdown a:hover{color:#f60;background:#fff3e4;text-decoration:none}.search-body{border:1px
+solid #CCC;border-top:none}.search-lists-hidden{display:none;height:0;overflow:hidden;transition:all 200ms;-webkit-transition:all 200ms}.search-list{background:#fff;line-height:24px;height:44px;overflow:hidden;border-bottom:1px dashed #ddd}.search-list.expanded{height:auto}.search-lists-hidden-show{display:block}.search-theme{text-indent:19px;width:93px;color:#999;float:left;margin-top:10px}.search-all{cursor:pointer;display:block;float:left;width:43px;height:24px;text-align:center;margin-right:10px;margin-top:10px}.search-all
+a{color:#333}.search-all:hover{text-decoration:none;color:#f60;background:#fff3e4}.search-all:hover
+a{color:inherit}.search-all.active{color:#fff;background:#f90}.search-all.active
+a{color:inherit}.search-content{float:left;width:960px;margin-top:10px;*padding-bottom:10px}.search-content
+a{color:#333}.search-content
+li{float:left;min-width:110px;margin-right:10px;margin-bottom:10px}.search-label{cursor:pointer;height:24px;display:inline-block;padding:0
+10px}.search-label
+.triangle{background-image:url(http://pic.lvmama.com/img/search/v1/search.png);background-position:-110px -25px;width:7px;height:4px;margin:9px
+0 0 8px;*margin:5px
+0 0 8px;display:inline-block;vertical-align:top}.search-label
+i{float:left;width:11px;height:11px;border:1px
+solid #ccc;margin:5px
+5px 0 0}.search-label:hover{color:#f60;background:#fff3e4}.search-label:hover
+a{text-decoration:none}.search-label:hover
+i{background:#fff;border:1px
+solid #f60}.search-label.active{color:#fff;background:#f90}.search-label.active
+a{color:#fff}.search-label.active
+i{border:1px
+solid #f60;background:#fff url(http://pic.lvmama.com/img/search/v1/search.png) no-repeat -20px -20px}.search-label.active
+.triangle{background-position:-110px -30px}.search-label.expanded{margin:-1px;background:#fbfbfb;border:1px
+solid #ddd;border-bottom:none;color:#f60;position:relative;z-index:3}.search-label.expanded
+.triangle{background-position:-110px 0}.search-label-dropdown{width:968px;position:absolute;z-index:2;background:#fbfbfb;border:1px
+solid #ddd;display:none;margin-top:-1px;*margin-top:23px;left:0;padding:10px
+0 4px 10px}.search-label-dropdown
+li{float:left;width:120px;line-height:22px;margin-bottom:6px}.search-label-dropdown li
+a{color:#333;padding:0
+10px;float:left;height:22px}.search-label-dropdown li a:hover{color:#f60;text-decoration:none}.search-label-dropdown li
+a.active{color:#fff;background:#f90}.search-label-dropdown.active{display:block}.search-content .search-li-date{height:24px;width:350px;overflow:visible}.search-content .search-li-date.active
+em{background:#f90}.search-content .search-li-date.active .search-date-label input, .search-content .search-li-date.active .search-date-label
+.input{background:#fff3e4;border:1px
+solid #f90;color:#f60}.search-content .search-li-date.active .search-date-label
+i{display:none}.search-content .search-li-date
+em{float:left;width:10px;height:1px;background:#ccc;margin:0
+3px;margin-top:13px}.search-content .search-li-date .cancel,
+.search-content .search-li-date
+a{cursor:pointer;color:#09c;margin-left:10px}.search-content .search-li-date .cancel:hover,
+.search-content .search-li-date a:hover{text-decoration:underline;color:#f60}.search-content .search-li-date
+.btn{margin-left:10px}.search-date-label{display:block;float:left;width:110px;height:26px;position:relative;vertical-align:top}.search-date-label .input, .search-date-label
+input{font-size:12px;display:inline-block;padding:0
+9px;width:90px;height:24px;line-height:24px;border:1px
+solid #ccc;*margin-top:-1px}.search-date-label
+i{position:absolute;top:5px;right:5px;display:block;width:16px;height:16px;background:url(http://pic.lvmama.com/img/search/v1/search.png) no-repeat -40px -20px}.search-li-date.active .search-date-label{position:static}.search-content-more{width:60px;float:left;padding-left:22px;margin-top:10px;color:#09c}.search-content-more a:hover
+i{background:url(http://pic.lvmama.com/img/search/v1/search.png) no-repeat -70px -20px}.search-content-more
+i{background:url(http://pic.lvmama.com/img/search/v1/search.png) no-repeat -60px -20px;width:7px;height:4px;display:inline-block;margin-left:6px;vertical-align:2px;*vertical-align:4px}.search-content-more.expanded
+i{background:url(http://pic.lvmama.com/img/search/v1/search.png) no-repeat -60px -30px}.search-content-more.expanded:hover
+i{background:url(http://pic.lvmama.com/img/search/v1/search.png) no-repeat -70px -30px}.search-clear{margin-top:-1px;background:#fff;height:47px;line-height:47px;text-indent:18px;font-size:12px;border-top:1px solid #e3e3e3;border-bottom:1px solid #e3e3e3;color:#09c}.search-clear
+a{color:inherit}.search-clear a:hover{color:#f60}.search-control{position:relative;background:#fff}.search-sort{float:left}.search-sort-item{cursor:pointer;padding:15px
+0;float:left}.search-sort-item .sort-link,
+.search-sort-item
+a{padding:0
+20px;display:block;border-right:1px solid #CCC;height:14px;line-height:12px}.search-sort-item .sort-link:hover,
+.search-sort-item a:hover{text-decoration:none}.search-sort-item
+i{margin:3px
+0 0 5px;*vertical-align:2px;display:inline-block;width:7px;height:7px;background:url(http://pic.lvmama.com/img/search/v1/search.png) no-repeat 0 -20px}.search-sort-item:hover,.search-sort-item.active{color:#f60}.search-sort-item:hover i, .search-sort-item.active
+i{background:url(http://pic.lvmama.com/img/search/v1/search.png) no-repeat -10px -20px}.search-sort-item.down
+i{background:url(http://pic.lvmama.com/img/search/v1/search.png) no-repeat 0px -30px}.search-sort-item.down:hover i, .search-sort-item.down.active
+i{background:url(http://pic.lvmama.com/img/search/v1/search.png) no-repeat -10px -30px}.search-filter-price{position:relative;height:26px;width:156px;float:left}.search-filter-price
+label{float:left;width:70px}.search-filter-price
+input{border:1px
+solid #ccc;width:48px;padding:0
+10px;height:24px;line-height:24px}.search-filter-price
+em{float:left;background:#ccc;height:1px;width:10px;margin:13px
+3px 0 3px}.search-filter-price-dropdown{background:#fff;margin:0
+0 0 -10px;position:absolute;width:163px;height:36px;overflow:hidden;padding:8px
+0 0 8px;transition:height 200ms;-webkit-transition:height 200ms}.search-filter-price-dropdown
+p{display:none}.search-filter-price-dropdown
+a{color:#09c}.search-filter-price-dropdown a:hover{color:#f60}.search-filter-price-dropdown
+.control{text-align:right;margin:34px
+7px 0 0}.search-filter-price-dropdown
+.btn{color:#fff;margin-left:10px}.search-filter-price-dropdown .btn:hover{color:#fff}.search-filter-price-dropdown.active{box-shadow:0px 2px 4px 0px rgba(0, 0, 0, 0.1);margin:-1px 0 0 -11px;border:1px
+solid #CCC;height:70px}.search-filter-price-dropdown.active
+p{display:block}.search-filter-price-new{position:relative;height:26px;width:156px;float:left}.search-filter-price-new
+label{float:left;width:70px}.search-filter-price-new
+input{border:1px
+solid #ccc;width:53px;padding:0
+10px;height:24px;line-height:24px}.search-filter-price-new input.input-error{border:1px
+solid #f00}.search-filter-price-new
+em{float:left;background:#ccc;height:1px;width:6px;margin:13px
+2px 0 7px}.search-filter-price-new-dropdown{background:#fff;margin:0
+0 0 -10px;position:absolute;width:169px;height:36px;overflow:hidden;padding:8px
+0 0 9px;transition:height 200ms;-webkit-transition:height 200ms}.search-filter-price-new-dropdown
+p{display:none}.search-filter-price-new-dropdown
+a{color:#09c}.search-filter-price-new-dropdown a:hover{color:#f60}.search-filter-price-new-dropdown
+.control{text-align:center;margin:0px
+7px 0 0}.search-filter-price-new-dropdown
+.btn{margin:0
+5px}.search-filter-price-new-dropdown.active{box-shadow:0px 2px 4px 0px rgba(0, 0, 0, 0.1);margin:-1px 0 0 -11px;border:1px
+solid #CCC;height:88px}.search-filter-price-new-dropdown .price-tip{display:none}.search-filter-price-new-dropdown.active .price-tip{color:#999;display:block;line-height:28px;text-align:center;height:28px;overflow:hidden;width:160px}.search-filter-price-new-dropdown.active .price-low,
+.search-filter-price-new-dropdown.active .price-high{color:#f60}.search-filter-price-new-dropdown.active .price-tip.price-tip-error,
+.search-filter-price-new-dropdown.active .price-tip.price-tip-error .price-low,
+.search-filter-price-new-dropdown.active .price-tip.price-tip-error .price-high{color:#f00}.search-filter-price-new-dropdown.active
+p{display:block}.search-sale{float:left;width:257px;margin:8px
+0 0 10px}.search-sale
+label{display:block;float:left;padding:0
+10px;height:26px;line-height:26px;cursor:pointer}.search-sale label
+b{width:14px;height:14px;display:inline-block;background:url(http://pic.lvmama.com/img/search/v1/search.png) no-repeat -120px -80px;vertical-align:-3px}.search-sale label
+i{float:left;width:11px;height:11px;border:1px
+solid #ccc;margin:7px
+5px 0 0}.search-sale label:hover{color:#333;background:#fff}.search-sale label:hover
+a{color:inherit}.search-sale label:hover
+i{border:1px
+solid #CCC}.search-sale
+label.active{color:#333;background:#fff}.search-sale label.active
+a{color:inherit}.search-sale label.active
+i{border:1px
+solid #f60;background:#fff url(http://pic.lvmama.com/img/search/v1/search.png) no-repeat -20px -20px}.search-page{margin-top:10px;float:left;width:183px;font-size:0;text-align:right;position:absolute;right:250px}.search-page .search-page-num{vertical-align:top;display:inline-block;font-size:12px;margin-right:5px}.search-page .search-page-num
+em{color:#f60}.search-page .prev, .search-page
+.next{cursor:pointer;margin-left:5px;vertical-align:top;display:inline-block;border:1px
+solid #ddd;width:19px;height:19px}.search-page .prev i, .search-page .next
+i{float:left;border-style:solid;border-width:4px;display:block;width:0;height:0}.search-page .prev:hover, .search-page .next:hover{border:1px
+solid #F80}.search-page .prev.disabled:hover, .search-page .next.disabled:hover{border:1px
+solid #ddd}.search-page .prev
+i{border-color:transparent #aeaeae transparent transparent;margin:6px
+0 0 3px}.search-page .prev:hover
+i{border-color:transparent #f80 transparent transparent}.search-page .prev.disabled
+i{border-color:transparent #dadada transparent transparent}.search-page .next
+i{border-color:transparent transparent transparent #aeaeae;margin:6px
+0 0 8px}.search-page .next:hover
+i{border-color:transparent transparent transparent #f80}.search-page .next.disabled
+i{border-color:transparent transparent transparent #dadada}.search-filter-more{position:absolute;right:10px;cursor:pointer;background:#fff;margin-top:-1px;float:left;margin-left:106px;width:131px;border:1px
+solid #e3e3e3;border-top:1px solid #fff;line-height:36px;height:36px;color:#09c;text-align:center}.search-filter-more
+i{margin:0
+0 0 7px;background:url(http://pic.lvmama.com/img/search/v1/search.png) no-repeat -60px -20px;width:7px;height:4px;display:inline-block;vertical-align:2px;*vertical-align:4px}.search-filter-more:hover{color:#f60}.search-filter-more:hover
+i{background:url(http://pic.lvmama.com/img/search/v1/search.png) no-repeat -70px -20px}.search-filter-more.expanded
+i{background:url(http://pic.lvmama.com/img/search/v1/search.png) no-repeat -60px -30px}.search-filter-more.expanded:hover{color:#f60}.search-filter-more.expanded:hover
+i{background:url(http://pic.lvmama.com/img/search/v1/search.png) no-repeat -70px -30px}.product-list{width:890px;float:left;position:relative;z-index:1}.product-hotel,.product-hotel-view{line-height:26px;color:#666}.product-hotel em, .product-hotel-view
+em{width:20px;height:20px;line-height:20px;text-align:center;display:inline-block;vertical-align:0;background-image:url(http://pic.lvmama.com/img/search/v1/search.png)}.product-hotel b, .product-hotel-view
+b{font-weight:normal;color:#aaa;margin:0
+15px 0 5px}.product-hotel span, .product-hotel-view
+span{width:430px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;height:26px;display:inline-block;vertical-align:top}.product-hotel{margin-top:8px}.product-hotel
+em{color:#ff8585;background-position:-140px 0}.product-hotel-view
+em{color:#40b9e2;background-position:-140px -40px}.product-recommend{position:relative;border:2px
+solid #f66;margin-bottom:10px}.product-recommend .product-item{border:none;border-bottom:1px solid #ddd;border-top:1px solid #ddd}.product-recommend .first-item{border-top:none}.product-recommend .last-item{border-bottom:none;margin-bottom:0}.product-recommend .product-picture{padding-left:19px}.product-recommend-label{position:absolute;background:url(http://pic.lvmama.com/img/search/v1/search.png) no-repeat 0 -40px;width:31px;height:84px;left:-33px;top:-2px}.product-item{position:relative;z-index:0;background:#fff;margin-bottom:10px;border:1px
+solid #ddd;transition:box-shadow 400ms;-webkit-transition:box-shadow 400ms;*min-height:180px}.product-item:hover{box-shadow:0px 2px 6px 2px rgba(0,0,0,0.1)}.product-picture{float:left;width:180px;padding:20px}.product-picture
+img{background:#CCC;width:210px;height:140px;display:block}.product-picture:hover{text-decoration:none}.product-label{position:absolute;display:inline-block;padding:0
+10px;height:24px;line-height:24px;text-align:center;color:#fff;margin-top:-140px;cursor:pointer;font-family:"Arial","PingFang SC","SimSun",serif}.product-label-green{background:#6C3}.product-label-orange{background:#FA0}.product-label-blue{background:#8BE}.product-label-pink{background:#F88}.product-label-purple{background:#c9e}.product-section{float:left;width:495px;padding:20px
+27px 20px 10px}.product-title{margin-top:2px;line-height:24px;max-height:48px;min-height:24px;overflow:hidden;font-size:16px;font-weight:normal;display:block;color:#333}.product-title-main{font-size:18px}.product-title-sub{font-size:16px;color:#666}.product-title
+a{color:#333}.product-title a:hover{color:#f60}.product-title a:hover .product-title-sub{color:#f60}.product-title
+em{font-size:18px;font-weight:bold}.product-title i, .product-title b, .product-title
+strong{font-size:12px;display:inline-block;padding:0
+4px;height:16px;line-height:16px;border:1px
+solid #f90;color:#f90;border-radius:2px;vertical-align:top;margin-top:3px;margin-right:5px;text-decoration:none;font-family:"Arial","PingFang SC","SimSun",serif}.product-title
+b{background:#f90;color:#fff;font-weight:normal}.product-title
+strong{font-weight:normal;color:#fff;background:#74c8fa;border-color:#74c8fa}.product-subtitle{font-size:14px;line-height:24px;height:24px;margin-top:8px;color:#666}.product-subtitle
+em{padding:0
+10px;line-height:18px;height:18px;background:#ff6f6f;color:#fff;float:left;display:block;border-radius:3px;margin-right:5px;margin-top:3px;font-size:12px;font-family:"Arial","PingFang SC","SimSun",serif}.product-subtitle-box{float:left;width:390px;position:relative;z-index:1}.product-subtitle-box
+p{margin:-5px -15px -5px -5px;padding:5px
+15px 5px 5px;width:380px;background:#fff;border:1px
+solid #FFF;position:absolute;height:24px;overflow:hidden}.product-subtitle-box
+i{position:absolute;width:7px;height:4px;top:10px;right:0;background:url(http://pic.lvmama.com/img/search/v1/search.png) no-repeat -100px 0}.product-subtitle-box:hover
+p{border:1px
+solid #ddd;height:auto}.product-subtitle-box:hover
+i{background:url(http://pic.lvmama.com/img/search/v1/search.png) no-repeat -100px -10px}.product-address{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:bold;color:#666;line-height:12px;height:13px;margin:14px
+0 8px 0;font-size:0}.product-address
+em{font-size:12px;color:#e38;font-weight:bold;margin-right:6px}.product-address em
+i{background:url(http://pic.lvmama.com/img/search/v1/search.png) no-repeat -80px 0;margin-right:4px;vertical-align:top;width:11px;height:13px;display:inline-block}.product-address em
+i.ship{background:url(http://pic.lvmama.com/img/search/v1/search.png) no-repeat -100px -160px;width:14px;height:14px}.product-address
+b{font-size:12px;display:inline-block;height:13px;padding-left:10px;padding-right:10px;border-left:1px solid #ccc}.product-details{height:22px;line-height:22px}.product-details
+dt{float:left;width:63px;color:#aaa}.product-details
+dd{position:relative;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#666;float:left;width:432px;font-size:12px;height:22px}.product-details
+a{color:#29e}.product-details a:hover{color:#f60}.product-details .go-date{width:410px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.product-details .go-date
+em{color:#e38}.product-details
+.more{position:absolute;right:0;top:0}.product-info{float:left;width:135px;text-align:center;margin:20px
+0}.product-price{line-height:22px;height:30px;font-size:12px;color:#999;
+margin-top: 30px;}.product-price
+b{font-weight:normal;font-size:16px;color:#f60}.product-price
+em{display:inline-block;font-size:24px;color:#f60;margin:0
+5px 0 2px;font-weight:bold}.product-price
+i{vertical-align:2px}.product-people{color:#999;height:22px;line-height:22px;margin-top:-5px;margin-bottom:5px}.product-new{background:#f80;height:1px;margin:21px
+auto 20px auto;width:118px;position:relative}.product-new
+em{position:absolute;font-size:14px;width:54px;margin-left:-27px;left:50%;top:-10px;display:block;background:#fff;color:#f60}.product-number{margin-top:2px}.product-number
+li{margin-top:8px;line-height:15px;color:#999}.product-number em, .product-number
+b{color:#f60;margin-right:2px}.product-number
+em{font-size:18px;vertical-align:-2px}.product-number
+b{font-size:15px;font-weight:normal;vertical-align:-1px}.product-number
+a{color:#999}.product-number a:hover{text-decoration:none;color:#f60}.all-title{height:62px;line-height:62px;padding:0
+20px}.all-title
+h3{float:left;color:#000;font-size:22px;font-weight:normal}.all-title h3
+.dot{text-indent:-9999em;width:5px;height:5px;display:inline-block;background:url(http://pic.lvmama.com/img/search/v1/search.png) no-repeat -100px -20px;margin:29px
+8px 0 8px;vertical-align:top;*margin-top:14px}.all-title
+.more{cursor:pointer;float:right;color:#999;font-size:12px}.all-title .more:hover{color:#f60}.all-hot .all-content{position:relative;height:207px}.all-content-list{position:absolute}.all-section-link{width:210px;height:210px;float:left;margin:0
+0 0 22px;color:#333;transition:transform 200ms;-webkit-transition:transform 200ms}.all-section-link:hover{color:#333;text-decoration:none;transform:translate(0, -5px);-webkit-transform:translate(0, -5px)}.all-section-link:hover .all-section-picture{height:92px}.all-section-link:hover .all-section-title{background:#fff;margin-top:7px;margin-bottom:6px;height:60px}.all-hot .all-section-link:hover .all-section-picture{height:112px}.all-hot .all-section-link:hover .all-section-title{height:40px}.all-section-picture{display:block;position:relative;width:210px;height:140px;overflow:hidden;transition:height 200ms;-webkit-transition:height 200ms}.all-section-label{position:absolute;right:0;top:0;background:#ff6f6f;padding:0
+10px;height:21px;line-height:21px;color:#fff}.all-section-title{display:block;font-size:14px;font-weight:normal;line-height:20px;height:20px;overflow:hidden;margin-top:6px;transition:height 200ms;-webkit-transition:height 200ms;color:#333}.all-section-title:hover{color:#f60;text-decoration:underline}.all-section-info{height:28px;line-height:28px;color:#999}.all-section-info
+em{color:#f60}.all-section-price{float:left}.all-section-price
+i{color:#f60;font-size:14px;vertical-align:-2px}.all-section-price
+em{font-size:18px;vertical-align:-2px}.all-section-sum{float:right}.all-hot,.all-channel{border:1px
+solid #ddd;margin-bottom:10px;background:#fff}.all-hot{position:relative;border:1px
+solid #ddd;margin-bottom:10px}.all-hot .all-section-link{height:207px;margin-bottom:0}.all-hot .all-section-title{font-size:14px;line-height:20px;margin-top:8px}.all-hot .all-section-info{line-height:30px}.all-hot .prev, .all-hot
+.next{top:109px}.all-channel{border:1px
+solid #ddd}.all-channel-freetour .all-title-subject{color:#b164e6}.all-channel-freetour .all-channel-nav{background:#f5f5f5 url(http://pic.lvmama.com/img/search/v1/search-all-bg.jpg) no-repeat 0 bottom}.all-channel-group .all-title-subject{color:#39c}.all-channel-group .all-channel-nav{background:#f5f5f5 url(http://pic.lvmama.com/img/search/v1/search-all-bg.jpg) no-repeat -210px bottom}.all-channel-fit .all-title-subject{color:#393}.all-channel-fit .all-channel-nav{background:#f5f5f5 url(http://pic.lvmama.com/img/search/v1/search-all-bg.jpg) no-repeat -420px bottom}.all-channel-around .all-title-subject{color:#66c}.all-channel-around .all-channel-nav{background:#f5f5f5 url(http://pic.lvmama.com/img/search/v1/search-all-bg.jpg) no-repeat -630px bottom}.all-channel-local .all-title-subject{color:#c36}.all-channel-local .all-channel-nav{background:#f5f5f5 url(http://pic.lvmama.com/img/search/v1/search-all-bg.jpg) no-repeat -840px bottom}.all-channel-nav{background:#f5f5f5;width:210px;height:410px;float:left;margin:0
+0 20px 22px}.all-channel-nav-title{margin:34px
+20px 0 20px;border-top:1px solid #e3e3e3}.all-channel-nav-title
+h4{background:#fff;border-radius:14px;text-align:center;font-size:16px;width:100px;height:28px;line-height:28px;border:1px
+solid #e3e3e3;font-weight:normal;margin:0
+auto 0 auto;position:relative;top:-15px}.all-channel-nav-content{line-height:26px;margin:-7px 0 5px 20px;width:210px}.all-channel-nav-content
+li{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;height:26px;width:90px;float:left}.all-channel-nav-content li
+a{color:#666}.all-channel-nav-content li a:hover{color:#f60}.all-channel-nav-content-day
+li{width:68px}.main-beside{float:right;width:230px}.main-beside
+img{display:block}.beside-box{background:#fff;border:1px
+solid #e3e3e3;margin-bottom:10px}.beside-title{height:33px;line-height:33px;background:#fbfbfb}.beside-title
+h3{font-size:14px;color:#666;text-indent:14px}.beside-promo{border:none;width:230px;height:150px;position:relative}.beside-promo .beside-tab{top:130px;position:relative}.beside-promo .beside-tab-content{position:absolute;width:230px;height:150px}.beside-promo .beside-tab-content
+li{float:left}.beside-promo .beside-tab-content
+img{opacity:1 !important}.beside-promo .prev, .beside-promo
+.next{display:none;top:47px}.beside-promo:hover .prev, .beside-promo:hover
+.next{display:block}.beside-tab{position:relative;font-size:0;text-align:center;height:20px;line-height:10px}.beside-tab
+a{vertical-align:top;display:inline-block;padding:5px
+3px;height:10px;background:none}.beside-tab a.active
+i{background:#f80}.beside-tab a
+i{vertical-align:top;display:inline-block;border-radius:50%;background:#fff;width:10px;height:10px}.beside-tab-content li
+a{display:block}.beside-sale{position:relative}.beside-sale .beside-tab-content{width:198px;position:absolute;padding:16px
+0}.beside-sale .beside-tab-content
+li{width:198px;float:left}.beside-sale .beside-content{height:264px;position:relative;width:198px;margin:0
+auto;overflow:hidden}.beside-sale .beside-tab{position:relative;top:235px}.beside-sale .beside-tab
+i{background:#ccc}.beside-sale .prev, .beside-sale
+.next{top:90px;display:none}.beside-sale:hover .prev, .beside-sale:hover
+.next{display:block}.sale-link{position:relative;display:block;cursor:pointer}.sale-link
+img{width:198px;height:132px}.sale-link
+h4{height:36px;line-height:18px;font-weight:normal;color:#333;overflow:hidden;margin:8px
+0 13px 0}.sale-link h4:hover{color:#f60;text-decoration:underline}.sale-link
+.info{height:22px}.sale-link
+.price{float:left;color:#f60;font-size:16px}.sale-link .price
+em{font-size:24px}.sale-link
+.sold{float:right;color:#999}.sale-link .sold
+em{color:#f60}.sale-link:hover{text-decoration:none}.sale-link-label{text-align:center;color:#fff;position:absolute;top:0;width:69px;height:71px;background:-moz-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%);background:-webkit-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%);background:linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#99000000',endColorstr='#99000000',GradientType=0)}.sale-link-type{height:23px;line-height:22px;background:url(http://pic.lvmama.com/img/search/v1/search.png) no-repeat 0 -135px}.sale-link-sale{height:28px;line-height:28px}.sale-link-sale
+em{vertical-align:-2px;font-size:20px}.sale-link-second{background:#000;color:#f90;height:20px;line-height:20px}.recommend-link{cursor:pointer;display:block;margin:0
+14px;height:60px;border-bottom:1px solid #eee;padding:15px
+0;line-height:18px}.recommend-link:hover{text-decoration:none}.recommend-link:hover
+h4{text-decoration:underline;color:#f60}.recommend-link:hover
+.price{text-decoration:none}.recommend-link:hover .price
+em{text-decoration:none}.recommend-link
+img{float:left}.recommend-link
+h4{width:100px;float:left;margin:-1px 0 0 7px;color:#333;font-weight:normal}.recommend-link
+.price{width:100px;float:left;margin:4px
+0 0 7px;color:#999;font-weight:normal}.recommend-link .price
+em{margin-right:5px;font-size:14px;font-weight:bold;color:#f60}.recommend-link.last-item{border-bottom:none}.history-link,.like-link{display:block;margin:14px}.history-link img, .like-link
+img{width:198px;height:132px}.history-link h4, .like-link
+h4{font-weight:normal;color:#666;height:36px;line-height:18px;overflow:hidden;margin:8px
+0 3px 0}.history-link h4:hover, .like-link h4:hover{color:#f60;text-decoration:underline}.history-link:hover,.like-link:hover{text-decoration:none}.assurance_new{border:1px
+solid #e3e3e3;background:#fff;margin-bottom:10px}.assurance_new
+h4{font-weight:normal;height:34px;line-height:34px;padding:0
+15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;background:#fbfbfb;font-size:14px;color:#666}.assurance_new_list{padding:10px
+0 0 15px}.assurance_new_list
+li{overflow:hidden;zoom:1;margin-bottom:10px}.assurance_new_list li
+i{display:block;margin-top:3px;float:left;width:16px;height:16px;background:url(http://pic.lvmama.com/img/search/v1/search.png) no-repeat scroll 0 0}.assurance_new_list li
+i.icon_jiage{background-position:-120px 0}.assurance_new_list li
+i.icon_tuihuo{background-position:-120px -20px}.assurance_new_list li
+i.icon_jiuyuan{background-position:-120px -40px}.assurance_new_list li
+i.icon_fuwu{background-position:-120px -60px}.assurance_new_list li
+i.icon_security{background-position:0 -160px}.assurance_new_list li
+i.icon_fast{background-position:-20px -160px}.assurance_new_list li
+i.icon_refund{background-position:-120px -20px}.assurance_new_list li
+i.icon_amends{background-position:-120px 0}.assurance_new_list li
+p{float:left;margin-left:8px;line-height:20px}.assurance_new_list li p
+b{color:#333;display:block;font-size:14px;font-weight:normal}.assurance_new_list li p
+span{font-size:12px;color:#999}.hotsale{border-top:1px solid #f80;margin-bottom:10px}.hotsale_list{width:198px;margin:0
+auto;overflow:hidden;zoom:1}.hotsale_list
+li{padding:15px
+0;border-top:1px solid #ddd;margin-top:-1px}.sale_img{display:block;position:relative;margin:0
+auto;width:198px;height:132px}.discount{width:52px;height:25px;background-position:0 -70px;color:#fff;position:absolute;top:0;left:0;text-align:center;line-height:25px;z-index:auto}.sale_tit{display:block;margin-top:5px;color:#666;line-height:20px}.sale_tit:hover{text-decoration:underline}.jiage_box{margin-top:10px;overflow:hidden;zoom:1}.current_price{display:block;float:left;margin-right:10px;color:#f60;font-size:14px;font-weight:bold;height:26px;line-height:26px}.current_price
+b{font-size:24px}.current_price
+i{color:#999;display:inline-block;font-size:12px;margin-left:3px}.jiage_box
+a{border-radius:3px;float:right;padding:0
+7px}.jiage_box
+del{text-decoration:line-through;color:#999}.sale_detail{margin-top:10px;overflow:hidden;zoom:1}.sale_detail
+p{float:left;color:#999}.remain_time{float:right;color:#999;font-weight:normal;line-height:18px}.remain_time
+i{display:inline-block;float:left;width:16px;height:18px;background:url(http://pic.lvmama.com/img/v5/dest.png) no-repeat 0 -60px;margin-right:5px}.remain_time
+b{color:#f60;padding:0
+3px;font-weight:normal}.season_hot{margin-bottom:10px}.season_hot h4
+a{color:#666}.score_detail{padding:20px;overflow:hidden;zoom:1}.score_l{float:left;width:90px;border-right:1px solid #eee;margin-right:15px}.integrate_score{font-size:12px;color:#999}.integrate_score
+b{font-size:24px;color:#f60;padding-right:5px}.score-level{display:block;margin-top:10px;width:70px;height:22px;line-height:22px;overflow:hidden;vertical-align:middle;background:url(http://pic.lvmama.com/img/v5/dest.png) -79px 4px;position:relative}.score-level
+i{display:block;height:22px;vertical-align:middle;width:70px;background:url(http://pic.lvmama.com/img/v5/dest.png) -79px -16px}.comment_amount{color:#999}.comment_amount
+a{color:#09c}.comment_amount a:hover{color:#f60;text-decoration:underline}.score_r
+li{color:#999;line-height:20px}.single_event{padding-left:10px}.single_event
+i{font-size:12px;color:#f60}.lvyou_index{color:#666;padding:5px
+18px 16px;word-wrap:break-word}.lvyou_index
+a{color:#09c}.lvyou_index a:hover{text-decoration:underline;color:#f60}.gonglve{padding:14px
+18px}.official_guide{padding-bottom:15px;border-bottom:1px solid #eee}.official_guide
+dt{float:left;margin-right:12px;width:90px}.official_guide
+dd{float:left;line-height:20px}.official_guide dd
+a{border-radius:2px;margin-top:5px;padding:0
+10px}.version{color:#666}.update_time{margin-top:10px;color:#999;font-size:12px}.update_time
+span{display:block}.guide_list
+li{margin-top:10px}.guide_list li
+a{display:block;width:192px;color:#666;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.guide_list li a:hover{text-decoration:underline;color:#f60}.scan_detail{color:#999}.scan_detail
+span{padding-right:20px}.paging
+.btn{border-radius:0;height:24px;line-height:24px;padding:0
+10px}.pagebox
+.pagemore{background:#f5f5f5}.nav_link{width:1158px;padding:20px;background:#fff;border:1px
+solid #ddd}.nav_link
+.title{border-bottom:1px solid #ddd;height:35px;line-height:30px;vertical-align:middle}.nav_link .title
+.title_font{font-size:22px;color:#333;float:left;margin-right:50px}.nav_link .title
+ul{float:left;width:960px;margin-left:-30px}.nav_link .title
+li{float:left;margin-left:30px;color:#666;height:34px;padding:0
+5px;cursor:pointer;position:relative}.nav_link .title li
+.icon_arrow{border-color:#f90 #fff #fff;left:50%;margin-left:-2px;top:36px;display:none}.nav_link .title
+li.active{font-weight:bold;border-bottom:2px solid #f90}.nav_link .title li.active
+.icon_arrow{display:block}.nav_link
+.link_list{width:100%;margin-top:10px}.nav_link .link_list
+ul{overflow:hidden}.nav_link .link_list
+li{float:left;width:180px;line-height:27px}.nav_link .link_list
+a{color:#666}.nav_link .link_list a:hover{color:#f60;text-decoration:none}.link_list_hot{line-height:22px;padding:6px
+0 6px 70px;margin-bottom:8px;color:#999;position:relative;border-bottom:#ddd solid 1px}.link_list_hot
+span{position:absolute;left:0;top:5px}.link_list_hot
+a{color:#666;margin-right:14px}.link_list_hot a:hover{color:#f60;text-decoration:underline}.link_city_all{overflow:hidden;zoom:1}.nav_link .link_city_all
+li{float:left;width:50%}.link_city_list{padding:1px
+0;padding-left:80px;position:relative;line-height:18px}.link_city_list
+dt{position:absolute;left:0;top:0;width:80px;height:22px;font-weight:bold;color:#333}.link_city_list
+dd{width:500px}.link_city_list dt
+a{color:#333}.link_city_list dd
+a{color:#666;margin-right:14px;overflow:hidden;display:inline-block}.nav_link .link_list a:hover{text-decoration:underline}.link_list_more{padding:1px
+0;height:22px;line-height:18px;overflow:hidden;zoom:1;position:relative}.link_list_more dt, .link_list_more
+dd{float:left}.link_list_more
+dt{width:55px;margin-right:12px;color:#999}.link_list_more
+dd{width:1000px}.link_list_more dd
+a{margin-right:10px;overflow:hidden;display:inline-block}.link_list_more
+.more_btn{display:none;position:absolute;right:0;top:0;padding-right:17px;cursor:pointer;color:#999}.link_list_more .more_btn:hover{color:#666}.more_btn
+.icon_arrow{top:10px}.more_show
+.icon_arrow{top:7px;border-color:#fff #fff #9F9F9F #fff}.more_show{height:auto}.recom_wrap{position:relative}.recom_wrap
+.edgeNav{width:56px;position:absolute;top:0;left:-70px}.recom_wrap .edgeNav
+ul{border:1px
+solid #ccc}.recom_wrap .edgeNav
+li{margin-top:-1px;margin-bottom:1px;height:32px;line-height:32px;position:relative;border-top:1px dotted #ddd;text-align:center;width:54px}.recom_wrap .edgeNav
+a{height:32px;line-height:32px;color:#999;display:block}.recom_wrap .edgeNav a:hover, .recom_wrap .edgeNav li.active
+a{margin-left:-3px;margin-bottom:-2px;width:60px;height:34px;line-height:34px;background:url(http://pic.lvmama.com/img/v6/dujiahotel/icon.png) -108px -145px no-repeat;color:#fff;text-decoration:none}.strategy{border:1px
+solid #ddd;width:908px;padding:20px;background:#fff;margin-bottom:10px}.strategy
+.title{font-size:22px;color:#333;padding-bottom:10px;border-bottom:1px solid #e3e3e3}.strategy
+.r_title{font-size:14px;color:#333;font-weight:bold;height:40px;line-height:40px}.strategy
+.evaluate{float:right;color:#999}.strategy .evaluate
+.number{font-size:18px;color:#f60;float:left}.strategy .evaluate
+.sign{font-size:12px;color:#f60;line-height:24px}.strategy
+.content{color:#656565;display:block;height:55px;line-height:18px}.strategy
+dl{border-bottom:1px dotted #ddd;padding-bottom:10px;overflow:hidden;margin-top:10px}.strategy dl
+a{color:#666}.strategy dl a:hover{color:#f60;text-decoration:underline}.strategy dl
+.split{margin:0
+5px}.strategy
+.a_img_wrap{height:115px;width:172px;display:inline-block;position:relative;overflow:hidden}.strategy
+dt{float:left;margin-right:15px}.strategy dt
+img{width:172px;height:115px}.strategy
+dd{display:block;float:left;width:720px}.strategy
+.sub_title{font-size:18px;color:#333;overflow:hidden;line-height:46px}.strategy .sub_title
+.more{color:#bababa;float:right;font-size:12px}.strategy .sub_title .more:hover{color:#f60}.strategy
+ul{margin-left:-14px;overflow:hidden}.strategy
+li{float:left;margin-left:12px;position:relative}.strategy li
+img{width:172px;height:115px}.strategy li
+.b_link{background:rgba(0, 0, 0, 0.6) !important;background:#000;height:16px;width:152px;padding:2px
+10px;position:absolute;left:0;bottom:27px}.strategy li .b_link
+a{color:#fff;line-height:16px;vertical-align:middle;display:block;width:152px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.strategy li .b_link a:hover{color:#fff;text-decoration:underline}.strategy li
+.inf{color:#999;height:20px;line-height:20px}.pro_box1 .pro_list1
+img{display:block;height:141px;width:221px}.pro_box1 .pro_list2
+img{display:block;height:141px;width:221px}.contrastBox{position:fixed;left:50%;bottom:0;z-index:10;margin-left:-609px;width:1218px;height:115px;display:none}.contrastOverlay{position:absolute;bottom:0;left:0;width:1218px;height:115px;background:#001323;opacity:0.8;filter:alpha(opacity=85)}.contrastProBox a, .contrastProBox a:hover,.contrastBtn-clear,.contrastBtn-clear:hover{color:#fff}.contrastTop{position:absolute;width:1218px;top:-9px;height:9px}.contrastIcon{display:inline-block;background:url(http://pic.lvmama.com/img/search/v1/pk_icon.png) no-repeat}.contrastTop
+span{position:absolute;top:0;width:9px;height:9px}.contrastIcon-left{left:0}.contrastIcon-right{right:0;background-position:-10px 0}.contrast-shadow{position:absolute;left:9px;top:0;width:1200px;height:9px;display:inline-block;background:url(http://pic.lvmama.com/img/search/v1/pk_icon.png) 0 -43px repeat-x}.contrastProBox{padding-left:9px}.contrastProBox
+li{float:left;position:relative;height:90px;padding-top:25px;width:347px;border-right:1px solid #515e69}.contrastIcon-close{position:absolute;top:8px;right:8px;width:9px;height:9px;background-position:-33px 0;cursor:pointer}.contrastPro{width:308px;padding:0
+20px}.contrastImg{width:90px;height:60px;display:block;float:left}.contrastTit{float:left;margin-left:10px;width:208px;height:36px;overflow:hidden;display:block;color:#fff;line-height:18px}.contrastTit:hover{color:#fff}.contrastPrice{float:left;margin:8px
+0 0 10px;display:block;height:18px;line-height:18px;color:#fff}.contrastPrice
+em{color:#f90}.contrastPrice
+b{padding:0
+2px;font-size:18px;font-weight:normal}.contrastNone{margin-top:15px;height:40px;line-height:40px;color:#ccc;text-align:center}.contrastNone
+span{padding-right:14px;opacity:0.5;vertical-align:middle;font-size:40px}.added
+.contrastNone{display:none}.contrastBtn{position:absolute;right:0;top:0;width:165px;padding-top:26px;text-align:center}.contrastBtn-clear{display:block;margin-top:12px;font-size:14px;line-height:16px}.poptip-warning{background:#fffaee;border:1px
+solid #fa0}.poptip-warning .tip-icon{position:relative;top:3px;margin-right:5px;_margin-top:4px;_margin-bottom:4px;_vertical-align:middle}.tip-light.poptip-warning .tip-arrow
+i{color:#fffaee}.tip-light.poptip-warning .tip-arrow
+em{color:#fa0}.contrastAdd{position:absolute;left:20px;bottom:-36px;width:210px;height:36px;text-align:center;color:#fff;font-size:14px;line-height:36px;transition:bottom 0.3s ease-out;-webkit-transition:bottom 0.3s ease-out}.contrastBg{position:absolute;left:0;bottom:0;width:210px;height:36px;z-index:0;background:#000;opacity:0.7;filter:alpha(opacity=70);display:block;height:36px}.contrastText{position:relative;z-index:1}.contrastAdd:hover .contrastBg, .contrastAdd.current
+.contrastBg{background:#f90;opacity:0.9;filter:alpha(opacity=90)}.product-recommend .product-picture
+.contrastAdd{left:19px}.product-picture{position:relative;overflow:hidden;padding-bottom:0;margin-bottom:20px}.product-item:hover
+.contrastAdd{bottom:0}.contrastIcon-add{width:14px;height:14px;margin:11px
+7px 0 0;*margin-top:4px;background-position:-31px -23px}.contrastAdd:hover
+.contrastIcon{transform:rotate(180deg);-webkit-transform:rotate(180deg)}.contrastAdd
+.contrastIcon{vertical-align:top}.contrastAdd.current:hover
+.contrastIcon{width:12px;height:12px;margin:13px
+9px 0 0;*margin:6px
+0px 0 0;background-position:-32px -10px;-webkit-transition:transform 0.4s ease-out;transition:transform 0.4s ease-out}.contrastText
+b{font-weight:normal}.current .contrastText b, .current:hover .contrastText .contrastTextAdded,.contrastTextAdded,.contrastTextExitAdd{display:none}.current .contrastText .contrastTextAdded, .current:hover .contrastText
+.contrastTextExitAdd{display:inline}.contrastIcon-vs{position:fixed;display:none;width:30px;height:30px;background-position:0 -10px;z-index:10}.tip-icon-nobg-big-warning{background:url(http://pic.lvmama.com/img/v5/dest.png) no-repeat;background-position:-151px -249px}.tip_style{z-index:auto;background:#fff;border:1px
+solid #e3e3e3;padding:40px
+40px 40px 50px;margin-top:0}.tip_style .tip-icon-big{left:80px;top:48px}.no_result{margin-top:20px}.result_r{float:right;margin-left:20px;width:230px}.result_l{float:left;width:950px}.assurance{border:1px
+solid #e3e3e3;background:#fff;margin-bottom:10px}.assurance
+h4{font-weight:normal;height:34px;line-height:34px;padding:0
+15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;background:#fbfbfb;font-size:14px;color:#666}.assurance_list{padding:10px
+0 0 15px}.assurance_list
+li{overflow:hidden;zoom:1;margin-bottom:10px}.assurance_list li
+i{display:block;margin-top:3px;float:left;width:16px;height:16px;background:url("http://pic.lvmama.com/img/line/product-detail-all.png") no-repeat scroll 0 0}.assurance_list li
+i.icon_jiage{background-position:-114px 0}.assurance_list li
+i.icon_tuihuo{background-position:-114px -26px}.assurance_list li
+i.icon_jiuyuan{background-position:-114px -53px}.assurance_list li
+i.icon_fuwu{background-position:-114px -79px}.assurance_list li
+p{float:left;margin-left:8px;line-height:20px}.assurance_list li p
+b{display:block;color:#666;font-size:14px;font-weight:normal}.assurance_list li p
+span{font-size:12px;color:#999}.loading_box{display:none;height:46px;padding:30px
+0;width:100%;text-align:center;border:1px
+solid #ddd;background:#fff}.icon_loading{display:inline-block;width:46px;height:46px;background:url(http://pic.lvmama.com/img/new_v/ui_scrollLoading/loadingGIF46px.gif) no-repeat center center;vertical-align:middle}.loading_box
+span{display:inline-block;height:46px;line-height:46px;vertical-align:middle;font-size:18px;color:#999;margin-left:10px}.product-theme{height:22px;line-height:22px}.product-theme
+dt{float:left;width:63px;color:#aaa}.product-theme
+dd{text-overflow:ellipsis;white-space:nowrap;color:#666;float:left;width:432px}.beside-link .price, .beside-history
+.price{width:100px;margin-top:5px;line-height:14px;color:#999;font-weight:normal}.beside-link .price em, .beside-history .price
+em{margin-right:5px;font-size:14px;font-weight:bold;color:#f60}.product-ticket-title{font-size:0;line-height:28px;font-weight:normal;margin-bottom:9px}.product-ticket-title
+a{color:#333}.product-ticket-title a:hover{color:#f60}.product-ticket-title
+.name{margin-right:9px;font-size:18px;font-weight:bold;vertical-align:top;text-decoration:none}.product-ticket-title
+.city{display:inline-block;line-height:14px;margin-right:9px;color:#666;font-size:12px;vertical-align:top;margin-top:8px}.product-ticket-title
+.level{display:inline-block;line-height:14px;margin-right:9px;color:#f90;font-size:12px;vertical-align:top;margin-top:8px}.product-ticket-title
+b{font-weight:normal;font-family:"Arial","PingFang SC","SimSun",serif;padding:0
+4px;height:16px;line-height:16px;border:1px
+solid #f90;color:#f90;font-size:12px;vertical-align:top;display:inline-block;margin-top:5px;border-radius:3px;margin-right:5px}.product-ticket-dropdown{background-color:#fff;position:relative;width:297px;line-height:18px;height:18px;padding:2px
+15px 2px 5px;margin-left:-5px;word-wrap:break-word;white-space:normal;border:1px
+solid #fff;overflow:hidden}.product-ticket-dropdown
+i{position:absolute;width:0;height:0;border-style:solid;border-width:3px 3px 0 3px;top:10px;right:5px;border-color:#333 transparent transparent transparent}.product-ticket-dropdown:hover{box-shadow:0px 0px 3px 0px rgba(0, 0, 0, 0.35);border:1px
+solid #e1e1e1;width:297px;height:auto;z-index:1}.product-ticket-dropdown:hover
+i{width:0;height:0;border-style:solid;border-width:0 3px 3px 3px;border-color:transparent transparent #333 transparent;margin-top:-1px}.product-ticket .product-details
+dd{overflow:visible}.product-special-header{margin:0
+13px;border-bottom:1px solid #ddd;height:36px}.psh-nav-tabs{width:435px;float:left}.psh-nav-tabs
+li{cursor:pointer;line-height:35px;height:35px;margin-right:15px;font-size:16px;color:#333;float:left;padding:0
+8px;border-bottom:2px solid transparent}.psh-nav-tabs
+li.active{font-weight:bold;color:#f90;border-bottom:2px solid #f90}.psh-nav-title{float:left;color:#999;margin-top:13px;line-height:14px}.psh-nav-title
+.price{width:60px;float:left}.psh-nav-title .lv-price{width:95px;float:left}.psh-nav-title
+.labels{width:210px;float:left}.psh-nav-title
+.way{width:60px;float:left}.psh-tab-contents .psh-tab-content{display:none}.psh-tab-contents .psh-tab-content.active{display:block}.psh-tab-contents
+.expand{text-align:right;margin:12px
+20px 10px 0}.psh-tab-contents .expand
+b{font-weight:normal}.psh-tab-contents .expand
+a{cursor:pointer;color:#29e}.psh-tab-contents .expand a
+i{margin-left:2px;display:inline-block;margin-top:7px;vertical-align:top;width:0;height:0;border-style:solid;border-width:5px 4.5px 0 4.5px;border-color:#29e transparent transparent transparent}.psh-tab-contents .expand a:hover{text-decoration:none;color:#f60}.psh-tab-contents .expand a:hover
+i{border-color:#f60 transparent transparent transparent}.psh-tab-contents .expand.show-overflow a
+i{border-style:solid;border-width:0 4.5px 5px 4.5px;border-color:transparent transparent #29e transparent}.psh-tab-contents .expand.show-overflow a:hover
+i{border-color:transparent transparent #f60 transparent}.psh-tab-content.show-overflow .product-special-list-overflow{display:block}.product-special-lists .product-special-list .product-special-items-details{display:none}.product-special-lists .product-special-list.show-details .product-special-items-details{display:block}.product-special-lists .product-special-list.show-details .name
+.triangle{background-position:-150px -80px}.product-special-lists .product-special-list-overflow{display:none}.product-special-lists
+li{margin:0
+13px;border-bottom:1px dashed #ddd}.product-special-lists li:hover{background-color:#fffaee}.product-special-lists li:hover .name
+.title{color:#f60}.product-special-lists
+.name{min-height:1px;color:#666;float:left;width:380px;padding-right:48px;font-size:0;line-height:22px;margin-bottom:10px}.product-special-lists .name
+.type{vertical-align:top;font-size:14px;margin-right:9px;color:#999;float:left}.product-special-lists .name
+.triangle{vertical-align:top;display:inline-block;margin-top:10px;width:10px;height:6px;background-image:url(http://pic.lvmama.com/img/search/v1/search.png);background-position:-140px -80px;margin-left:4px}.product-special-lists .name
+.title{color:#666;vertical-align:top;font-size:14px;text-decoration:none}.product-special-lists .name
+.label{background-color:#fff;margin:4px
+0 0 10px;display:inline-block;vertical-align:top;height:14px;line-height:14px;font-family:"Arial","PingFang SC","SimSun",serif;border:1px
+solid #74c8fa;font-size:0;border-radius:10px 0 0 10px;overflow:hidden}.product-special-lists .name .label
+em{color:#fff;font-size:12px;background-color:#74c8fa;padding-right:3px}.product-special-lists .name .label em
+i{display:inline-block;width:16px;height:16px;vertical-align:top;background-image:url(http://pic.lvmama.com/img/search/v1/search.png);background-position:-120px -140px;margin:-1px 0 0 -1px}.product-special-lists .name .label em
+b{margin-right:2px;font-weight:bold}.product-special-lists .name .label
+u{padding:0
+3px 0 2px;font-size:12px;color:#73c7f9;text-decoration:none}.product-special-lists
+.price{margin-top:5px;line-height:18px;min-height:1px;color:#999;float:left;width:60px}.product-special-lists .lv-price{margin-top:5px;line-height:18px;min-height:1px;font-size:20px;color:#f60;float:left;width:95px}.product-special-lists
+.labels{margin-top:5px;min-height:1px;float:left;width:210px;height:16px;overflow:hidden;font-size:0}.product-special-lists .labels
+.label{overflow:hidden;vertical-align:top;display:inline-block;font-family:"Arial","PingFang SC","SimSun",serif;margin-right:5px;font-size:0;line-height:14px;color:#fff;background-color:#f90;height:14px;border:1px
+solid #f90;border-radius:2px}.product-special-lists .labels .label
+em{padding:0
+3px 0 1px;font-size:12px}.product-special-lists .labels .label
+b{font-weight:normal;font-size:12px;background-color:#fff;color:#f90;padding:0
+4px;height:14px;overflow:hidden}.product-special-lists .labels .label
+i{display:inline-block;vertical-align:top;margin-top:1px;margin-right:3px;margin-left:1px;width:8px;height:12px;background-image:url(http://pic.lvmama.com/img/search/v1/search.png);background-position:-40px -160px}.product-special-lists
+.way{line-height:16px;vertical-align:top;min-height:1px;float:left;width:60px;margin-top:5px}.product-special-lists
+.pay{min-height:1px;float:left;width:55px;margin-bottom:15px}.product-special-items-main{padding-top:15px;padding-left:7px;cursor:pointer}.product-special-items-details{border-top:1px solid #fc6;background-color:#fffcf6;padding:10px
+17px 8px 0;line-height:24px;position:relative}.product-special-items-details
+.shrink{text-align:right}.product-special-items-details .shrink
+a{color:#29e;cursor:pointer}.product-special-items-details .shrink a:hover{text-decoration:none;color:#f60}.product-special-items-details
+.triangle{position:absolute;width:10px;height:6px;top:-6px;left:100px;background-image:url(http://pic.lvmama.com/img/search/v1/search.png);background-position:-140px -90px}.psi-item-nav-tabs{padding:0
+13px}.psi-item-nav-tabs
+li{cursor:pointer;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center;background-color:#fff;float:left;width:126px;padding:0
+10px;height:24px;border:1px
+solid #ddd;margin:0
+10px 10px 0}.psi-item-nav-tabs li:hover{background-color:#fff}.psi-item-nav-tabs
+li.active{color:#fff;background-color:#fa0;border-color:#fa0}.psi-tab-contents{padding-left:18px}.psi-tab-contents .psi-tab-content{display:none}.psi-tab-contents .psi-tab-content
+dl{color:#666}.psi-tab-contents .psi-tab-content
+dt{float:left;font-weight:bold;width:66px}.psi-tab-contents .psi-tab-content
+dd{float:left;width:770px}.psi-tab-contents .psi-tab-content.active{display:block}.beside-comment
+ul{margin:0
+14px}.beside-comment-tit{max-height:36px;overflow:hidden;font-size:12px;line-height:18px}.beside-comment-tit
+a{color:#333}.beside-comment-tit a:hover,.commentScroll a:hover{color:#f60}.beside-comment-content{display:inline-block;height:90px;overflow:hidden;color:#666;line-height:18px}.searchIcon{display:inline-block;background:url(http://pic.lvmama.com/img/search/v1/search.png) no-repeat}.searchIcon-user{width:11px;height:13px;margin-right:4px;background-position:-60px -160px;vertical-align:middle}.searchIcon-star{position:absolute;left:0;top:0;width:70px;height:12px;background-position:0 -180px}.searchIcon-duckstar{position:relative;width:70px;height:12px;background-position:-80px -180px}.beside-comment-feed{margin:7px
+0;line-height:0;height:12px}.beside-comment-user{margin:4px
+0 8px;overflow:hidden;color:#999;white-space:nowrap;text-overflow:ellipsis}.beside-comment
+li{height:194px;margin-top:11px;border-bottom:1px solid #eee}.beside-comment li:last-of-type,.beside-comment
+li.last{border-bottom:none}.commentScroll{max-height:405px;overflow:hidden;*height:405px}.commentScroll
+a{color:#666}.search_list_visa .search-page{right:20px}.search-label
+.num{color:#999;padding-left:5px}.search-label.active .num,.search-label.active:hover
+.num{color:#fff}.search-label:hover
+.num{color:#f60}.visaPro-picture{display:block;float:left;width:161px;height:107px;margin:19px;border:1px
+solid #e3e3e3}.search_list_visa .product-section{width:540px}.visaPro-tit{font-size:16px;color:#666;line-height:28px}.visaPro-tit
+span{padding:0
+3px;color:#ccc}.visaPro-tit
+a{display:inline-block;max-width:450px;height:28px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#333;vertical-align:middle}.visaPro-tit a:hover{color:#f60}.visaPro-info{width:500px;margin-top:10px}.visaPro-info
+li{float:left;width:225px;margin-right:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.visaPro-info
+em{color:#999}.visaPro-titInfo{color:#666}.visaPro-titInfo
+dfn{color:#f80}.successRate{padding:14px
+9px 5px}.successRate
+dfn{padding-left:5px;color:#f80;font-size:33px}.successRate-tit dfn
+span{font-size:22px}.successRate-tit{padding-left:10px;height:34px;border-bottom:1px solid #e3e3e3;color:#999;font-size:14px;line-height:34px}.successRate
+.searchIcon{width:20px;height:20px;margin-right:13px;vertical-align:top}.searchIcon-service{background-position:0 -200px}.searchIcon-fast{background-position:-20px -200px}.searchIcon-noworries{background-position:-40px -200px}.searchIcon-moreplant{background-position:-60px -200px}.searchIcon-youhui{background-position:-80px -200px}.successRate-list{padding-left:10px;margin-top:15px;font-size:14px;color:#666}.successRate-list
+li{height:20px;margin-bottom:10px;line-height:20px}.product-recommend-departure-start{height:38px}.product-recommend-departure{margin-top:-3px;line-height:38px}.product-recommend-departure.fixed{box-shadow:0px 2px 6px 0px rgba(0, 0, 0, 0.1);margin-top:0;border:1px
+solid #ddd;border-top:none;width:1158px;background-color:#fff;position:fixed;top:43px;padding:0
+20px;z-index:21}.prd-address{float:left;color:#666;font-size:14px}.prd-address
+em{color:#e38;font-weight:bold;margin:0
+5px 0 8px}.prd-address em
+i{width:13px;height:15px;display:inline-block;background:url(http://pic.lvmama.com/img/search/v1/search.png) no-repeat -80px -160px;vertical-align:-3px;margin-right:5px}.prd-hot{float:right;font-size:12px}.prd-hot
+em{color:#999}.prd-hot
+a{color:#666;font-weight:normal;cursor:pointer}.prd-hot a:hover{color:#f60}.prd-hot
+i{height:14px;width:1px;display:inline-block;margin:0
+8px;background-color:#ccc;vertical-align:-3px}.score_detail
+.score_r{padding-left:0;border-left:none}

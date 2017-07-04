@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>门票详情</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/selectivizr-min.js"></script>
+		      <link rel="stylesheet" href="css/search-box.css">
+<link rel="stylesheet" href="css/ticket_search.new.css">
+      <link rel="stylesheet" href="css/index_3.css">
+<link rel="stylesheet" href="css/index_2.css">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/detaillvmama.css">
+    <script src="js/slide.js"></script>
+    <script src="js/style.js"></script>
+</head>
+<style>
+
+.route_right_hot a.more{width: 60px;height: 20px;border: 1px solid #ececec;border-radius: 10px;position: absolute;top:20px;right:30px;line-height: 20px;text-align: center;font-size: 12px;color: #999;transition: 0.8s;}
+.route_right_hot a.more:hover{border-color: #ff9a00;background: #ff9a00;color: #fff;transition: 0.8s;}
+
+ h4 {
+    padding-left: 15px;
+    margin-top: 40px;
+    height: 30px;
+    background: #f5f5f5;
+    line-height: 30px;
+    border-radius: 15px;
+    margin: 20px 0 15px;
+font-size: 16px;
+color: #333;
+}
+h6 {
+    margin: 50px 0 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.characlist{color:#666666;font-size:12px;}
+.characlist:hover{color:#FF6600}
+.activelist{color:#FF4040}
+.activelist:hover{color:#FF6600}
+#introdutionDiv{width:250px;height:auto;overflow:hidden;float:left;text-overflow:ellipsis;color:#666666;position:relative;top:6px;}
+#introdutionDiv:hover{color:#FF6600}
+
+.product-ticket-dropdown{background-color:#fff;position:absolute;width:229px;line-height:18px;height:18px;padding:2px 15px 2px 5px;margin-left:80px;
+word-wrap:break-word;white-space:normal;border:1px solid #fff;overflow:hidden}
+.product-ticket-dropdown:hover{box-shadow:0px 0px 3px 0px rgba(0, 0, 0, 0.35);border:1px solid #e1e1e1;width:229px;height:auto;z-index:999}
+
+#baoA{color:#0099CC}
+.details_book{width: 368px;height: 390px;float:left;margin-right: 15px;background-color: #fafafa;overflow:hidden;text-overflow:ellipsis;}
+.details_book .book_city{width: 320px;height: 330px;float: left;margin: 0 15px;padding: 0px 15px 14px 10px;overflow:hidden;text-overflow:ellipsis;}
+.ptditem.pdetails.selactive{display:block}
+.details_book .book_city .row b{font-size: 13px;color: #666;line-height: 20px;height: 20px;display: inline-block;float:left;width: 80px;font-weight: normal;}
+.details_book .book_city .row i{font-size: 13px;color: #666;line-height: auto;height: auto;display: inline-block;float:left;width: 250px;overflow: hidden;font-style: normal;}
+.details_book .book_city .row{width: 330px;height: auto;float: left;}
+
+.route .route_left{width: 900px;height:auto;float: left;}
+.details_book .book_city{width: 330px;height: 360px;float: left;margin: 0 10px;background: #fff;border: 1px solid #fff;padding: 14px 15px 14px 16px;}
+a:hover{text-decoration:none;}
+
+/* #Divopentimes,#Divtimes{display:inline;}*/
+</style>
+<body>
+<!--------顶部----------->
+<div class="header_top">
+    <div class="container">
+        <div class="left">
+            <span>文博疗养欢迎您！</span>
+            <b><img src="images/phone.png" alt="" class="phone">手机客户端下载</b>
+        </div>
+        <div class="right">
+             <ul>
+                <li>尊敬的  <font color="red" >中国</font> 您好!</li>
+				<li>疗养币余额：200.3&nbsp;&nbsp;&nbsp;账户余额：10</li>
+                <li>|</li>
+                <li class="li_drop">
+                    <a href="member.html">会员中心<img src="images/arrow_down.png" class="arrow_down" alt=""></a>
+                    <ul>
+                        <li><a href="personal_order.html">全部订单</a></li>
+                        <li><a href="personal_info.html">个人信息</a></li>
+                        <li><a href="javascript:;">全部疗养币</a></li>
+                        <li><a href="personal_pass.html">登录密码</a></li>
+                    </ul>
+                </li>
+                <li><a href="login.html">退出</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="header_search">
+    <div class="logo">
+        <a href="#"><img src="images/logo.png" alt="" class="img-responsive"></a>
+    </div>
+    <div class="header_mid">
+        <div class="row header_find">
+            <input type="text" placeholder="请输入目的地/线路/酒店">
+            <button type="button">搜索</button>
+        </div>
+        <div class="header_hot">
+            <b>热门搜索：</b>
+            <ul>
+                <li><a href="#">三亚</a></li>
+                <li><a href="#">香港</a></li>
+                <li><a href="#">马儿代夫</a></li>
+                <li><a href="#">巴厘岛</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header_contact">
+        <ul>
+            <li>
+                <img src="images/header_kefu.png" alt="">
+                <span>欢迎使用</span><br/>
+                <a href="#">在线客服</a>
+            </li>
+            <li>
+                <img src="images/header_tel.png" alt="">
+                <span>24h客户服务电话</span><br/>
+                <a href="#">400-8888-888</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-----------导航------------>
+<div class="header_nav">
+    <div class="container">
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="route.html">疗养线路</a></li>
+            <li><a href="plane.html">飞机票</a></li>
+            <li><a href="train.html">火车票</a></li>
+            <li><a href="hotel.html">疗养院</a></li>
+            <li><a href="hotel.html">酒店</a></li>
+            <li class="active"><a href="ticket.html">景点门票</a></li>
+            <li><a href="#">手信</a></li>
+        </ul>
+    </div>
+</div>
+<!---------------内容部分------------>
+<div class="location">
+    <span><a href="#">首页</a>><a href="#">门票</a>><a href="#">门票详情</a></span>
+</div>
+<div class="route">
+   
+<div class="route_left">
+		<div class="route_details"> <a href="javascript:;" onclick="javascript:document.getElementById('loadDetailGoods').scrollIntoView()">
+			<h3>长沙海底世界<small title="景区级别 ">AAAA</small></h3>
+			</a>
+			
+			      <div class="hotel_price" style="text-align:right;position:absolute;left:700px;top:236px;">
+                    <span><i>￥</i><em>4.00</em>起</span>
+                    <button type="button" onclick="javascript:document.getElementById('loadDetailGoods').scrollIntoView()">立即预订</button>
+                </div>
+			<div class="route_slide">
+				<div class="slide">
+					<div id="tFocus">
+						<div class="prev" id="prev"></div>
+						<div class="next" id="next"></div>
+						
+							<ul id="tFocus-pic">
+							   
+							       <li style="opacity: 1; z-index: 5;"><a href="javascript:;"><img src="images/1-ts.jpg" alt=""></a></li> 
+                   		       
+							       <li style="z-index: 0; opacity: 0;"><a href="javascript:;"><img src="images/2-ts.jpg" alt=""></a></li> 
+                   		       
+							       <li style="z-index: 0; opacity: 0;"><a href="javascript:;"><img src="images/3-ts.jpg" alt=""></a></li> 
+                   		       
+							       <li style="z-index: 0; opacity: 0;"><a href="javascript:;"><img src="images/4-ts.jpg" alt=""></a></li> 
+                   		       
+							
+							</ul>
+							<div id="tFocusBtn"> <a href="javascript:void(0);" id="tFocus-leftbtn"></a>
+								<div id="tFocus-btn">
+									<ul style="left: 0px;">
+									  
+							                <li class="active"><img src="images/1-ts.jpg" alt=""></li> 
+                   		                
+							                <li class=""><img src="images/2-ts.jpg" alt=""></li> 
+                   		                
+							                <li class=""><img src="images/3-ts.jpg" alt=""></li> 
+                   		                
+							                <li class=""><img src="images/4-ts.jpg" alt=""></li> 
+                   		                
+									</ul>
+								</div>
+								<a href="javascript:void(0);" id="tFocus-rightbtn"></a> </div>
+				
+					</div>
+					<script type="text/javascript">addLoadEvent(Focus());</script> 
+				</div>
+				
+				
+				
+				
+				<div class="details_book">
+					<div class="book_city">
+						
+							<div class="row"> <b>景点地址：</b><i>湖南省长沙市开福区三一大道浏阳河东金鹰文化城内</i></div>
+						   <div class="row"> <b>景区级别：</b>
+						   <i style="color:#FF8800">AAAA&nbsp;级</i>
+						   
+						   </div>
+							  <div class="row product-details clearfix" id="Divopentimes" style="margin-top: 10px;display:inline;"> 
+							   <b>营业时间：</b>
+							     <div class="product-ticket-dropdown" style="float:left;">
+							     
+				                     
+							          8:00-18:00	
+                   		           
+                                  </div>
+							  </div>
+							<div class="row " style="margin-top: 10px;"> <b>景区主题：</b><i>
+							 主题乐园、
+							</i></div>
+							  
+					    
+					    <div class="row "><b>景点特色：</b>
+					      <i> 
+						       
+	                   		   
+						      </i>
+                     
+                      </div>
+                      
+                     <div style="display:inline">
+                          <div style="float:left;color:#666666;width:80px;font-size:13px;line-height:32px;">景点介绍：</div>
+                          <div id="introdutionDiv">
+                            <a href="javascript:;" onclick="javascript:document.getElementById('feiyong').scrollIntoView()"> 
+                            长沙海底世界坐落于浏阳河畔金鹰影视文化城内，占地100余亩，投资近三亿元人民币，由海洋馆、极地动物馆、科教馆、水上乐园、儿童乐园五大功能区组成。集观赏、休闲、娱乐、科普于一体，是中南地区展示物种较多、节目内容丰富、参与性强、具时尚感的海洋主题公园，是中国海洋协会、湖南省科协授牌的“海洋科普教育基地”，国家4A级旅游景区。在园内可观看到英武彪悍的大鲨鱼、可爱活泼的大海龟、千姿百态的珊瑚礁、海螺、海星、海贝…等上千种、数万尾形态各异、色彩艳丽的海洋生物等等。
+                            </a>
+                          </div>  
+                      </div>
+					       
+					      
+					      
+					</div>
+				</div>
+				
+				
+				
+			</div>
+		</div>
+	
+	
+	<!-- load商品-->
+	<div class="dcontent dorder-list">
+	   <!-- 开始 dpro-list-->
+        <div class="dpro-list">
+                    <table class="ptable table-full" style="display: block;" id="loadDetailGoods">
+                        <thead class="pttit" style="width:900px;">
+	                        <tr>
+	                            <td></td>
+	                            
+	                            <td>
+	                                <dl class="ptditem">
+	                                    <dd class="pdpaytype">支付方式</dd>                             
+	                                    <dd class="pdprice">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;售价</dd>
+	                                    <dd class="pdlvprice"><span style="position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市场价</span></dd>
+	                                    <dt class="pdname">产品名称</dt>
+	                                </dl>
+	                            </td>
+	                        </tr>
+                        </thead>
+                       
+
+           
+							       
+                   		        
+					 <tbody class="ptbox" id="">
+					
+					  <tr>
+					     <td class="ptdname">
+					         <div class="ptname"><h5>
+					                     
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+				                         
+				                         
+										 
+										 
+										 
+				                         
+				                         自定义
+					         
+					         </h5>
+					         </div>
+					     </td>
+					     <td>
+					         <!-- 开始ptdlist -->
+					         <div class="ptdlist">
+					         
+					         <!-- 开始pdlist-inner -->
+					            <div class="pdlist-inner">
+					                  
+					                  
+					                  
+					                              
+						              <!-- 这个是门票的时候价格表-->
+						              <dl class="ptditem">
+						                      <dd class="pdpaytype">
+						                         <!-- 在线支付ipay 加 ipay-online 景区则不加-->
+						                         <span class="ipay ipay-online">
+						                            <a href="order.html" class="btn btn-w btn-small  btn-orange">预订</a>
+						                         </span>
+						                      </dd>
+						                      
+						                       <!-- 驴妈妈价 -->                 
+						                      <dd class="pdlvprice">
+						                          <dfn>¥<i>4.00</i><span>起</span></dfn>
+						                      </dd>
+						                      
+						                      <!-- 市场价 -->
+						                      <dd class="pdprice"><del>¥8.00</del></dd>
+						                      <dt class="pdname">
+						                         <a href="javascript:;" class="ptlink" title="长沙海底世界景区手机电子导览服务(短信发送，不含门票)">
+						                                                       长沙海底世界景区手机电子导览服务(短信发送，不含门票)
+						                            <span class="icon_arrownew" onclick="javascript:clickspan('div3416708');"><i>◆</i><b>◆</b></span>
+						                         </a>
+						                      </dt>
+						                 
+									       <dd class="pdetails" id="div3416708">
+									           <div class="tiptext tip-light">
+									                      <div class="tip-arrow tip-arrow-11">
+												             <em>◆</em>
+												             <i>◆</i>
+												          </div>
+												    <!-- 预订须知详情 -->      
+									                 <div class="tip-other">
+									                     <dl class="dl-hor">
+									                        <dt>费用包含</dt>
+														     <dd>
+														         1.长沙海底世界景区电子导览讲解1份（不含景区门票）。
+														     </dd>
+									                     </dl>
+									                    <dl class="dl-hor"></dl>
+												        <dl class="dl-hor">
+												           <dt>票种说明</dt>
+												           <dd></dd>
+												        </dl>
+									
+									
+													    <dl class="dl-hor">
+													       <dt>入园须知</dt>
+													       <dd>
+                    
+                       是否需要取票： 是<br>
+                    
+                    入园地点：下单成功后收到驴妈妈订单短信中的链接（二维码）进入H5导览页面，输入短信中的授权码即可享受景区电子导览讲解。<br>
+                    取票时间：无限制<br>
+                    
+                    入园方式：1. 凭驴妈妈订单短信中的智能导游服务使用链接和授权码获取导览服务，短信中有使用有效期，请在有效期内使用。<br>
+                    有效期限：指定游玩日1天内有效<br>
+
+                    				                       
+													       </dd>
+													   </dl>
+									
+													   <dl class="dl-hor">
+													        <dt>重要提示</dt>
+													        <dd>
+													            <dl class="dl-hor">
+													               使用说明：1.通过链接（二维码）进入H5导览页面，输入授权码即可享受景区电子导览讲解。2.点击推荐路线，可查看推荐路线，方便科学游玩陌生景区。3.点击景点列表，可查看当前景区所有讲解景点语音讲解。4.点击语音类型，可选择当前景区合你心意类型的语音讲解5.右下侧更有聊天窗口，点击即可与当前同在景区游玩的小伙伴聊天。6.点击景点小喇叭，即可收听景点语音讲解及文字图片介绍。7.点击右侧菜单栏自动按钮，可实现景区语音自动导览。8.如果您发现景点地图有啥不清晰、不满意、不对的地方，也可点击纠错跟程序猿哥哥反映。9.右侧菜单栏有更多强大的功能等您发掘哦。
+																</dl>
+													        </dd>
+													   </dl>
+									
+											           <dl class="dl-hor">
+											               <dt>退改说明</dt>
+											               <dd>本商品支持30天内可退。预订付款后未使用，可在“我的订单”中申请退款，且不收取任何手续费。</dd>
+											          </dl>
+									             </div>
+									              <!-- 预订须知详情结束 -->
+									              <a href="javascript:;" class="view-details" onclick="javascript:clickover('div3416708');">收起</a>
+									        </div>
+									     </dd>
+								  </dl>
+								 <!-- end这个是门票的时候价格表--> 
+							  	 
+								 
+								 
+							  </div>
+							  <!-- 结束pdlist-inner -->
+					       </div>
+					        <!-- 结束ptdlist -->
+					    </td>
+					  </tr>
+					</tbody>
+					
+                              
+    
+                         
+                  </table>
+                
+           </div>
+           <!-- 结束 dpro-list-->
+                            
+             
+    </div>
+	<!--end商品 -->
+		
+		
+		
+		
+		<!-- 开始须知 -->
+		<div class="route_anchor">
+			<div class="anchor_title"> 
+			   <ul>
+                    <li class="active"><a href="javascript:;" onclick="javascript:document.getElementById('tese').scrollIntoView()">预订须知</a></li>
+                     
+                    <li><a href="javascript:;" onclick="javascript:document.getElementById('feiyong').scrollIntoView()">景点介绍</a></li>
+                   
+                </ul>
+			</div>
+			
+			  <div class="anchor_contain">
+                <div class="title" id="tese">预订须知</div>
+         
+                    <div class="content">
+                    
+                       <div class="darea">
+                         <h5>免票政策</h5>
+                            <p>景区规定统一售价，暂无其他免票政策。</p>
+                       </div>
+                     
+                      
+                       <div class="darea">
+                          <h5> 优惠政策</h5>
+                            <p>景区规定统一售价，暂无其他优惠政策。 </p>
+                       </div>
+                      
+                    
+                       
+                       <div class="darea noline">
+						  <h5> 重要说明</h5>
+						  <p></p>
+					   </div>
+					 
+					
+					    
+					
+					
+					
+                    </div>
+  
+     
+  
+  
+  
+  
+               
+                <div class="title" id="feiyong">景点介绍</div>
+                    <div class="content" style="width:808px;padding-left:35px;">
+                    
+                
+                     
+                   <h4>长沙海底世界简介</h4>
+                   <!-- <span style="font-size:17px; font-family:黑体"><b>长沙海底世界简介</b></span> -->
+                    <div style="line-height:27px;font-size:14px;">
+			              长沙海底世界坐落于浏阳河畔金鹰影视文化城内，占地100余亩，投资近三亿元人民币，由海洋馆、极地动物馆、科教馆、水上乐园、儿童乐园五大功能区组成。集观赏、休闲、娱乐、科普于一体，是中南地区展示物种较多、节目内容丰富、参与性强、具时尚感的海洋主题公园，是中国海洋协会、湖南省科协授牌的“海洋科普教育基地”，国家4A级旅游景区。在园内可观看到英武彪悍的大鲨鱼、可爱活泼的大海龟、千姿百态的珊瑚礁、海螺、海星、海贝…等上千种、数万尾形态各异、色彩艳丽的海洋生物等等。
+			         </div> 
+			       
+			           <div style="line-height:27px;14px;">
+			                    
+			                      <h6><span class="icon dicon-point"></span>海洋馆</h6>
+			                       “海洋馆”是一个13000多平米的大型的室内展馆，由热带雨林区、中国园林区、海洋生物展示区、触摸区等四大展区组成。在馆内可看到英武彪悍的大鲨鱼、憨态可掬的大海龟、千姿百态的珊瑚礁、海螺、海星、贝壳…等上千种、数万尾形态各异、色彩艳丽的海洋生物，欣赏到精彩绝伦的“人鲨共舞”表演、“美人鱼”表演。馆内还拥有中南地区较长的海底隧道，漫步于隧道中，宛如置身于神奇的海底，自由穿梭于各种鱼之间，尽览迷人的水下世界。馆内温度常年维持在26度，舒适的环境、迷人的水底风景，誉有“海底龙宫”之美称。  <br>  <br> 
+			                        <img src="images/1-t.jpg">  <br>
+			                       
+			                      <h6><span class="icon dicon-point"></span>极地动物馆</h6>
+			                       “极地动物馆”是长沙海底世界二期建设项目，总面积达7000多平米，是极地动物展示、表演的专馆。在馆内乖巧可爱的大白鲸、聪明伶俐的海豚、幽默滑稽的海象、海狮、海豹、憨厚的企鹅、温驯的北极狼等十来种珍惜动物的展示，及白鲸、海象、海豚、海狮等极地动物明星的精彩表演、俄罗斯水下芭蕾表演。除观赏外，馆内还设有自费潜水，喂食锦鲤、海龟，摸鲨鱼、海星、鲎，亲密接触海豚、白鲸、海狮、海豹等多项“鱼”乐活动。  <br>  <br> 
+			                        <img src="images/1-t.jpg">  <br>
+			                       
+			                      <h6><span class="icon dicon-point"></span>科教馆</h6>
+			                       “科教馆”是科普学习的殿堂，由科教室、生物进化展厅、海洋动物标本展厅、海洋贝壳标本展厅组成。馆内以现代高科技术，配合生物实体标本、文字解说、图片展示的形式，生动、形象地向每一位游客传授海洋知识。  <br>  <br> 
+			                        <img src="images/1-t.jpg">  <br>
+			                       
+			                      <h6><span class="icon dicon-point"></span>水上乐园</h6>
+			                       “水上乐园”则有惊险刺激的高台滑水、波涛汹涌的人造海浪、轻波荡漾的环流河、卡通境界的儿童池，深水池…迷人的景色，是老少皆宜的欢乐海港。  <br>  <br> 
+			                        <img src="images/1-t.jpg">  <br>
+			                       
+			                      <h6><span class="icon dicon-point"></span>儿童乐园</h6>
+			                       “儿童乐园”则是小朋友的游乐“天堂”，园内十多款免费游乐项目，深受小朋友喜欢。  <br>  <br> 
+			                        <img src="images/1-t.jpg">  <br>
+			                      
+			              </div>
+			                
+                   </div>
+
+            </div>
+			
+			
+			
+		</div>
+		<!-- 结束须知 -->
+		
+	</div>
+
+
+
+
+    <div class="route_right">
+        <div class="route_right_hot">
+            <h3>热门线路产品排行</h3>
+            <ul>
+                <li>
+                    <a href="#">
+                        <i>1</i>
+                        <span>广州长隆野生动物园-珠海长隆海洋王国双飞半自助4日游2晚5星长隆狩猎房，含大马戏，报名立减</span>
+                        <b>￥6799起</b>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i>2</i>
+                        <span>广州长隆野生动物园-珠海长隆海洋王国双飞半自助4日游2晚5星长隆狩猎房，含大马戏，报名立减</span>
+                        <b>￥6799起</b>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i>3</i>
+                        <span>广州长隆野生动物园-珠海长隆海洋王国双飞半自助4日游2晚5星长隆狩猎房，含大马戏，报名立减</span>
+                        <b>￥6799起</b>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i>4</i>
+                        <span>广州长隆野生动物园-珠海长隆海洋王国双飞半自助4日游2晚5星长隆狩猎房，含大马戏，报名立减</span>
+                        <b>￥6799起</b>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i>5</i>
+                        <span>广州长隆野生动物园-珠海长隆海洋王国双飞半自助4日游2晚5星长隆狩猎房，含大马戏，报名立减</span>
+                        <b>￥6799起</b>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="route_right_adv">
+            <a href="#"><img src="images/adv01.jpg" alt=""></a>
+            <a href="#"><img src="images/adv01.jpg" alt=""></a>
+        </div>
+    </div>
+    <div style="clear: both;"></div>
+</div>
+<!----------底部----------->
+<div class="footer">
+    <div class="container">
+        <div class="foot_li">
+            <img src="images/foot_liaoyang.png" alt="">
+            <ul>
+                <li><b>疗养服务</b></li>
+                <li><a href="#">疗养线路</a></li>
+                <li><a href="#">疗养院</a></li>
+                <li><a href="#">疗养产品</a></li>
+            </ul>
+        </div>
+        <div class="foot_li">
+            <img src="images/foot_piaowu.png" alt="">
+            <ul>
+                <li><b>票务服务</b></li>
+                <li><a href="#">国内机票</a></li>
+                <li><a href="#">国际机票</a></li>
+                <li><a href="#">火车票</a></li>
+            </ul>
+        </div>
+        <div class="foot_li">
+            <img src="images/foot_hotel.png" alt="">
+            <ul>
+                <li><b>酒店服务</b></li>
+                <li><a href="#">酒店预订</a></li>
+                <li><a href="#">三星级</a></li>
+                <li><a href="#">四星级</a></li>
+                <li><a href="#">五星级</a></li>
+            </ul>
+        </div>
+        <div class="foot_li">
+            <img src="images/foot_spot.png" alt="">
+            <ul>
+                <li><b>景点门票</b></li>
+                <li><a href="#">当季精选</a></li>
+                <li><a href="#">周边城市</a></li>
+                <li><a href="#">热门城市</a></li>
+                <li><a href="#">游玩主题</a></li>
+            </ul>
+        </div>
+        <div class="foot_li">
+            <img src="images/foot_about.png" alt="">
+            <ul>
+                <li><b>关于我们</b></li>
+                <li><a href="#">企业简介</a></li>
+                <li><a href="#">媒体报道</a></li>
+                <li><a href="#">客户服务</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="footer_nav"></div>
+<div class="footer_copyright">
+    <div class="container">
+        <ul>
+            <li><a href="#">关于文博疗养</a></li>
+            <li><a href="#">业务合作</a></li>
+            <li><a href="#">加入我们</a></li>
+            <li><a href="#">我要投诉</a></li>
+            <li><a href="#">安全中心</a></li>
+            <li><a href="#">关于我们</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <ul>
+            <li><b>Copyright ©2016 xxxxx.com   赣ICP备05021087号</b></li>
+            <li><b>文博疗养网客服电话12345678</b></li>
+        </ul>
+    </div>
+    <div class="container">
+        <img src="images/foot_copyright.jpg" alt="">
+    </div>
+</div>
+</body>
+</html>
